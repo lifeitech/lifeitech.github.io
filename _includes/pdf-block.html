@@ -1,0 +1,18 @@
+
+<div>
+<!-- display 3 thumbnail pictures. -->
+{% assign thumbnails = include.thumbnails | split: ", " %}
+{% for num in thumbnails %}
+<a class="popup img-link" href="/assets/imgs/pdfs/{{include.abbr}}{{num}}.png" title="{{include.title}} Screenshot Page {{num}}" style="color: white;">
+    <img style="max-width: 220px" src="/assets/imgs/pdfs/{{include.abbr}}{{num}}.png" title="{{include.title}} Screenshot Page {{num}}">
+</a>
+{% endfor %}
+<!-- The icon and the PDF file link. -->
+<div style="margin-top: 10px; margin-bottom: 35px;">
+<i class="fas fa-file-pdf" style="color:red;"></i> <a href="/assets/pdfs/{{include.filename}}" title="{{include.title}}">{{include.title}}.pdf</a>
+</div>
+<!-- if not bottom, insert a dividing line. -->
+{% if include.bottom != true %}
+    <hr class="hr-twill-colorful">
+{% endif %}
+</div>
