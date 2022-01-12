@@ -119,10 +119,20 @@ Hosting your website on GitHub Pages is really easy.
 
 Name your repository *username.github.io* where username is your GitHub username. Push this repository to GitHub and you are done. Now you can open your browser, go to *uername.github.io* and see your website! There is no need to worry about web server or database or anything.
 
-You can use your own domain name by putting the domain name in a file named `CNAME` in your repository.
-
 With a default GitHub account, the repository for your website has to be a public repository. If you change it to a private one, your published website will no longer be available. If you want to host your website in a private repository while still making your website available, you need to upgrade to a GitHub pro account, which costs you <mark>$4</mark> per month as of 2022. This is still cheaper than many website builder like wix and Squarespace, which would cost you around <mark>$12</mark> per month.
 
+## Using a custom domain name
+You can use your own domain name by putting the domain name in a file named `CNAME` in your repository. 
+
+In addition, you need to tell your DNS provider to redirect your domain to GitHub servers. You DNS provider is usually the same as your domain provider, e.g. NameCheap, GoDaddy or [Google Domains](https://domains.google/). After all, they don't know where you intent to host your website, being it AWS, Google Cloud, your own machine or GitHub. You have to tell them this information. To do so, login on your domain provider's website and create a `A` resource record, adding IP addresses for GitHub Pages.
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+More instructions are at GitHub Pages [documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 # Should you Drag and Drop?
 
