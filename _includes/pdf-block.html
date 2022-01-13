@@ -4,7 +4,7 @@
 {% assign thumbnails = include.thumbnails | split: ", " %}
 {% for num in thumbnails %}
 <a class="popup img-link" href="/assets/imgs/pdfs/{{include.abbr}}{{num}}.png" title="{{include.title}} Screenshot Page {{num}}" style="color: white;">
-    <img style="max-width: 220px" src="/assets/imgs/pdfs/{{include.abbr}}{{num}}.png" title="{{include.title}} Screenshot Page {{num}}">
+    <img style="max-width: 220px" src="/assets/imgs/pdfs/{{include.abbr}}{{num}}.png" alt="{{include.title}} Screenshot Page {{num}}">
 </a>
 {% endfor %}
 <!-- The icon and the PDF file link. -->
