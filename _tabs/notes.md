@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PDFs
+title: Notes
 icon: 📕
 order: 1
 ---

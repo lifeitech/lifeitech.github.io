@@ -1,18 +1,19 @@
 ---
-title: How I Created This Website
-date: 2022-01-06 +0800
+title: Building a website with Jekyll and GitHub Pages
+date: 2022-01-06 18:00:00 +0800
 categories: [Programming]
 tags: [web-development, html]
 image:
   src: /assets/imgs/website-head.jpg
+  width: 800
   height: 500
 ---
 
-I built this website using the Jekyll framework and GitHub Pages. In this post, I document how I did it. Different options for writing blogs will also be compared. 
+> I built this website using the Jekyll framework and GitHub Pages. In this post, I document how I did it. Different options for writing blogs will also be compared. 
 
 # The Jekyll Framework
 
-![](/../assets/imgs/jekyll.png)
+![](/../assets/imgs/jekyll.png){: width="800" height="500" }
 
 [Jekyll](https://jekyllrb.com/) is a website generator. It is a software package written in Ruby. To use it on your own machine, first install Ruby, and then install the package via Ruby gems:
 

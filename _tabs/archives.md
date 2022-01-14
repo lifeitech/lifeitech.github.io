@@ -1,7 +1,7 @@
 ---
 layout: archives
 title: Archives
-icon: 📈
+icon: 📦
 order: 4
 ---
 
