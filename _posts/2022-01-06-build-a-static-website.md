@@ -4,16 +4,16 @@ date: 2022-01-06 18:00:00 +0800
 categories: [Programming]
 tags: [web-development, html]
 image:
-  src: /assets/imgs/website-head.jpg
+  src: /assets/imgs/build-a-website.jpg
   width: 800
   height: 500
 ---
 
-> I built this website using the Jekyll framework and GitHub Pages. In this post, I document how I did it. Different options for writing blogs will also be compared. 
+> An overview of the Jekyll framework, instructions about hosting your website on GitHub Pages, and a comparison among different options for writing technical blogs.
 
-# The Jekyll Framework
+## The Jekyll Framework
 
-![](/../assets/imgs/jekyll.png){: width="800" height="500" }
+![](/../assets/imgs/jekyll.png){: width="800" height="500" style="max-width: 70%"}
 
 [Jekyll](https://jekyllrb.com/) is a website generator. It is a software package written in Ruby. To use it on your own machine, first install Ruby, and then install the package via Ruby gems:
 
@@ -33,7 +33,7 @@ jekyll s
 
 and Jekyll will generate static website files (HTML, CSS, JS) that are ready to be served. 
 
-## Liquid 
+### Liquid 
 
 Define layouts of different pages of your website using the [Liquid](https://shopify.github.io/liquid/) template language. Liquid lets you write HTML pages in a programmable way. An example below is clear:
 
@@ -58,7 +58,7 @@ Jekyll also makes available some [variables](https://jekyllrb.com/docs/variables
 
 For a complete list of available variables go to [official docs on variables](https://jekyllrb.com/docs/variables/). 
 
-## Site Structure
+### Site Structure
 
 The basic structure in your website folder is typically as follows.
 
@@ -93,7 +93,7 @@ The basic structure in your website folder is typically as follows.
 
   in your layout file.
 
-## Themes
+### Themes
 
 At this point, you might have realized that, you still need to write a good amount of code if you want to build a full-fledged website. Luckily, many people have shared their website templates as [themes](https://jekyllrb.com/docs/themes/). You can directly use a theme so that you don't have to start from scratch and worry every details about HTML, CSS and JavaScript, but instead just focus on your content creation. View Jekyll themes at the following websites:
 
@@ -114,7 +114,7 @@ the [minima](https://github.com/jekyll/minima) theme will be installed by defaul
 
 When you are finished developing your website, the next step is to push your folder to GitHub.
 
-# Publish your site on GitHub Pages
+## Publish your site on GitHub Pages
 
 Hosting your website on GitHub Pages is really easy. 
 
@@ -122,7 +122,7 @@ Name your repository *username.github.io* where username is your GitHub username
 
 With a default GitHub account, the repository for your website has to be a public repository. If you change it to a private one, your published website will no longer be available. If you want to host your website in a private repository while still making your website available, you need to upgrade to a GitHub pro account, which costs you <mark>$4</mark> per month as of 2022. This is still cheaper than many website builder like wix and Squarespace, which would cost you around <mark>$12</mark> per month.
 
-## Using a custom domain name
+### Using a custom domain name
 You can use your own domain name by putting the domain name in a file named `CNAME` in your repository. 
 
 In addition, you need to tell your DNS provider to redirect your domain to GitHub servers. You DNS provider is usually the same as your domain provider, e.g. NameCheap, GoDaddy or Google Domains. After all, they don't know where you intent to host your website, being it AWS, Google Cloud, your own machine or GitHub. You have to tell them this information. To do so, login on your domain provider's website and create a `A` resource record, adding IP addresses for GitHub Pages.
@@ -135,18 +135,18 @@ In addition, you need to tell your DNS provider to redirect your domain to GitHu
 
 More instructions are at GitHub Pages [documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
-# Should you Drag and Drop?
+## Should you Drag and Drop?
 
 Should you build your blog website using drag-and-drop website builders like wix and Squarespace? My point of view is, if you know programming, then you should use one of the frameworks like Jekyll (others include Gatsby, Hexo, Hugo). After all, you are building a static website for blogs, not a millionaire web app. You are not dealing with the backends. If you are satisfied with using a theme, just go ahead and you have almost no coding. If you want customization, it's really not that difficult to tweak a little bit HTML and CSS so you control exactly how your website looks. You can decide on your own where to host your website. You can host it via GitHub Pages, or cloud services like AWS and Google Cloud if you prefer. This flexibility can be very helpful if you decide to change your minds later.
 
 If you simply want to write tech blogs, their price is probably a bit too expensive. It can be even more time-consuming to drag around and adjust elements until you are satisfied with the design. It is also difficult to save your work. What if you want to switch to another platform, like from wix to Squarespace, or from wix  to WordPress? Basically you have to start over again. But you never worry about losing your work if you have all your source code at your disposal.
 
-# Should you write your blogs on Medium?
+## Should you write your blogs on Medium?
 
 Medium is probably the most popular online publishing platform. With publications like [towards data science](https://towardsdatascience.com), it also has a large community of ML/AI lovers. There could be many potential benefits for writing blogs on medium. First, you can actually make money on medium, through the [Medium Partnership Program](https://medium.com/earn). For many people it's even their full-time job.  Second, you benefit from a large pool of audience. It's easier for people to come across your articles.  And third, you are free from all the hassles of writing code in order to build your website. You can just focus on your writings.
 
 However, the biggest problem with medium for tech writers is that, <mark>they have zero support for LaTeX, as well as code highlighting.</mark> The reason is simple. The majority of users write or read about cars, food, emotions, money and more, but never differential equations or Python programming. People who need to write math equations occupy only a small portion.  Adding those supports means loading additional JS libraries, which can slow down the website and cause troubles for all users. They decide that it's not worthy to do that. The result in the end is that, your article could look *terrible*, especially if you have a lot of inline math and code snippets. Even though you can embed GitHub Gist for some code highlighting, the overall format quality for a math-intensive article is just too bad such that I wouldn't bother.
 
-# Summary
+## Summary
 
 In this post I introduced how to use Jekyll and GitHub Pages to build and host a static website. In Jekyll you can use the Liquid template language to write your HTML page layouts. Many themes are also available for free. Push your repo named _username.github.io_ to GitHub to serve your website to the public. I also compared developing your own website versus the option of using a third-party website builder or writing on medium. My suggestion is to develop your own site, since this gives you the ultimate flexibility and control.
