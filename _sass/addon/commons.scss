@@ -1554,52 +1554,52 @@ $sidebar-display: "sidebar-display";
   #search-wrapper {
     margin-right: 3%;
   }
-
+// 1650px sidebar style
   #sidebar {
     width: $sidebar-width-large;
 
-    .profile-wrapper {
-      margin-top: 4rem;
-      margin-bottom: 1rem;
+    // .profile-wrapper {
+    //   margin-top: 4rem;
+    //   margin-bottom: 1rem;
 
-      &.text-center {
-        text-align: left !important;
-      }
+    //   &.text-center {
+    //     text-align: left !important;
+    //   }
 
-      %profile-ml {
-        margin-left: 4.5rem;
-      }
+    //   %profile-ml {
+    //     margin-left: 4.5rem;
+    //   }
 
-      #avatar {
-        @extend %profile-ml;
+    //   #avatar {
+    //     @extend %profile-ml;
 
-        > a {
-          width: 6.2rem;
-          height: 6.2rem;
+    //     > a {
+    //       width: 6.2rem;
+    //       height: 6.2rem;
 
-          &.mx-auto {
-            margin-left: 0 !important;
-          }
-        }
-      }
+    //       &.mx-auto {
+    //         margin-left: 0 !important;
+    //       }
+    //     }
+    //   }
 
-      .site-title {
-        @extend %profile-ml;
+    //   .site-title {
+    //     @extend %profile-ml;
 
-        a {
-          font-size: 1.7rem;
-          letter-spacing: 1px;
-        }
-      }
+    //     a {
+    //       font-size: 1.7rem;
+    //       letter-spacing: 1px;
+    //     }
+    //   }
 
-      .site-subtitle {
-        @extend %profile-ml;
+    //   .site-subtitle {
+    //     @extend %profile-ml;
 
-        word-spacing: 0;
-        margin-top: 0.3rem;
-      }
+    //     word-spacing: 0;
+    //     margin-top: 0.3rem;
+    //   }
 
-    } // .profile-wrapper (min-width: 1650px)
+    // } // .profile-wrapper (min-width: 1650px)
 
     ul {
       padding-left: 2.5rem;
@@ -1652,6 +1652,7 @@ $sidebar-display: "sidebar-display";
       i {
         background-color: var(--sidebar-btn-bg);
         font-size: 1rem;
+        color: black;  // fix large width blank out issue
         width: $icon-block-size;
         height: $icon-block-size;
         border-radius: 50%;
