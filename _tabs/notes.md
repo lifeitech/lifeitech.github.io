@@ -5,7 +5,7 @@ icon: 📕
 order: 1
 ---
 
-I'm glad to share some course notes I wrote. Subjects include algorithms, machine learning, statistics and probability theory, stochastic process, optimal control theory, general topology and more. All notes are math-intensive.
+I'm glad to share some course notes I wrote. Subjects include algorithms, machine learning, statistics and probability theory, stochastic process, optimal control theory, general topology and more.
 
 ## Notes on Machine Learning
 
@@ -47,7 +47,7 @@ This is my course notes on optimal control theory. First we discuss Banach space
 
 ## Course Notes for Algorithms
 
-This is my course notes for algorithms course at Bocconi University. Part of the course followed [Cormen's Introduction to Algorithms ](https://mitpress.mit.edu/books/introduction-algorithms-third-edition). Besides data structures (stacks, linked lists, BSTs, hash tables etc.) and sorting algorithms, the notes contain a detailed documentation for graph algorithms, including the Prim's algorithm, the Bellman-Ford Algorithm, Dijkstra's algorithm, the Floyd-Warshall algorithm and so on, as well as several dynamic programming problems. Randomized algorithms are also discussed, including the Karger's min-cut algorithm.
+Course notes for algorithms course. Part of the course followed [Cormen's Introduction to Algorithms ](https://mitpress.mit.edu/books/introduction-algorithms-third-edition). Besides data structures (stacks, linked lists, BSTs, hash tables etc.) and sorting algorithms, the notes contain a detailed documentation for graph algorithms, including the Prim's algorithm, the Bellman-Ford Algorithm, Dijkstra's algorithm, the Floyd-Warshall algorithm and so on, as well as several dynamic programming problems. Randomized algorithms are also discussed, including the Karger's min-cut algorithm.
 
 {% include pdf-block.html abbr="algo"
                           filename="optimization.pdf" 

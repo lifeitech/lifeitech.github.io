@@ -1,5 +1,5 @@
 ---
-title: An Introduction to Generative Models
+title: "Generative Models: from Noise to Data" 
 date: 2022-01-15 13:25:00 +0800
 categories: [Data Science]
 tags: [deep-learning, generative-model]
@@ -18,7 +18,7 @@ The three classes of models differ in interpretation of the noise space, model s
 
 We now discuss these three generative models in in some detail. We shall use the following notations: $$\mathcal{X}$$ denotes data space, which is usually a subset of $$\mathbb{R}^d$$ for some dimension $$d$$. $$\mathcal{Z}$$ denotes noise space, and $$Z$$ denotes a generic random variable taking values in $$\mathcal{Z}$$ with distribution $$p_Z$$, for example a standard multivariate Gaussian. 
 
-![](/../assets/imgs/gen-models.png){: width="1019" height="404" }
+![](/assets/imgs/gen-models.png){: width="1019" height="404" }
 _Three Classes of Generative Models_
 
 ## Generative Adversarial Networks
@@ -185,7 +185,7 @@ x_{d'+1:d} = (y_{d'+1:d} - t(x_{1:d'})) \odot s^{-1}(x_{1:d'}).
 \end{cases}
 $$
 
-![](/../assets/imgs/affine-coupling.png){: width="610" height="308" .shadow}
+![](/assets/imgs/affine-coupling.png){: width="610" height="308" .shadow}
 _Affine Coupling Layer_
 
 ### Autoregressive flows
@@ -203,7 +203,7 @@ $$
 
 Namely, the transformation $$f_\alpha$$ is such that the first output dimension only depends on the first input dimension, the second output dimension only depends on the first two input dimensions, and so on. With this design, the Jacobian of $$f_\alpha$$ is naturally lower-triangular, so that we can obtain fast and exact likelihood evaluation in one single pass. One way to ensure this dependence of output dimension on input dimension is through multiplying the weights in fully connected networks by binary _masks_, an approach taken in MADE [[7]](#7). 
 
-![](/../assets/imgs/made.png){: width="1800" height="1252" style="max-width: 70%" .shadow}
+![](/assets/imgs/made.png){: width="1800" height="1252" style="max-width: 70%" .shadow}
 _MADE Model_
 
 On the other hand, sampling time is linear in the number of dimensions: $$x_2$$ has to be obtained after $$x_1$$ is computed, $$x_3$$ has to be obtained after both $$x_1$$ and $$x_2$$ are computed, and so on:
@@ -225,7 +225,7 @@ $$
 
 where each conditional distribution could have some neural network structure with trainable parameters, and MLE is usually used to train the model. 
 
-![](/../assets/imgs/autoregressive.png){: width="1000" height="522" }
+![](/assets/imgs/autoregressive.png){: width="1000" height="522" }
 _Autoregressive Model_
 
 Whereas flow models typically only model continuous data, autoregressive models can model both continuous and discrete data. 
