@@ -1,5 +1,5 @@
 ---
-title: Deformation Retraction is "Continuous" Retraction
+title: Deformation Retraction is 「Continuous」 Retraction
 date: 2022-01-20 22:37:00 +0800
 categories: [Mathematics]
 tags: [topology]
