@@ -11,9 +11,12 @@ tail_includes:
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@lifeitech">
 <meta name="twitter:creator" content="@lifeitech">
-<meta name="twitter:title" content="{{page.title}}">
-<meta name="twitter:description" content="{{page.excerpt}}">
-<meta name="twitter:image" content="{{page.image.src | absolute_url}}">
+
+<meta property="og:image" content="{{page.image.src | absolute_url}}">
+<meta property="og:title" content="{{page.title}}">
+<meta property="og:description" content="{{page.excerpt}}">
+<meta property="og:url" content="{{page.url | absolute_url}}">
+<meta property="og:type" content="article">
 
 {% include lang.html %}
 
