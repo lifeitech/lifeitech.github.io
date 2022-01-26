@@ -1,10 +1,11 @@
 ---
-title: Deformation Retraction is 「Continuous」 Retraction
+title: Deformation Retractions are 「Continuous」 Retractions
 date: 2022-01-20 22:37:00 +0800
 categories: [Mathematics]
 tags: [topology]
 image:
   src: /assets/imgs/deformation-retraction.png
+  alt: "deformation retractions algebraic topology"
   width: 800
   height: 500
 math: true
@@ -53,14 +54,14 @@ One should distinguish between retraction and deformation retraction. The former
 
 <span style="color:#43c743">**Example 2.2**</span>&nbsp;&nbsp; The following picture shows that the unit disk $$D^2$$ in $$\mathbb{R}^2$$ can be continuously shrunk to the origin. 
 
-![ex2-2.png](/assets/imgs/deformation-retraction/ex2-2.png){:height=500}
+![deformation retractions unit disk to origin](/assets/imgs/deformation-retraction/ex2-2.png){:height=500}
 
 You might want to carefully distinguish between the homotopy $$H$$ and the map $$r$$. The homotopy $$H$$ is a collection of functions from $$D^2$$ to a subspace of $$D^2$$, including all functions shown above, each with a different range. In particular, $$H$$ includes the identity $$\mathbb{I}$$ as well as $$r$$. The homotopy $$H$$ organizes them together "in a continuous way". $$r:D^2\to\{0\}$$ is a always a retraction. But deformation retraction requires that such an $$H$$ exists so that we can start from the identity and continuously evolve to $$r$$.
 
 
 <span style="color:#43c743">**Example 2.3**</span>&nbsp;&nbsp; The following picture shows that $$D^2\setminus\{0\}$$  can be continuously retracted to the unit circle $$S^1$$. 
 
-![ex2-2.png](/assets/imgs/deformation-retraction/ex2-3.png){:height=500}
+![deformation retractions D^2-{0} to circle](/assets/imgs/deformation-retraction/ex2-3.png){:height=500}
 
 This is pretty intuitive, but why we are not able to do the same thing for $$D^2$$? 
 
@@ -69,7 +70,7 @@ From algebraic topology we know that $$D^2$$ and $$S^1$$ have different fundamen
 
 <span style="color:red">**Example 2.4**</span>&nbsp;&nbsp; It is important to note that, in the process of shrinking a space $$X$$, we must always stay whinin the space $$X$$ and not go outside of it. So, for example, the following "shrinkage" is not a deformation retraction:
 
-![ex2-2.png](/assets/imgs/deformation-retraction/ex2-4.png){:height=500}
+![deformation retractions negative example](/assets/imgs/deformation-retraction/ex2-4.png){:height=500}
 
 
 Here the space $$X$$ is a segment of the torus $$S^1\times S^1$$. As one tries to shrink it, the resulting spaces are no longer part of $$X$$, so by our definition such a mapping is not deformation retraction. 

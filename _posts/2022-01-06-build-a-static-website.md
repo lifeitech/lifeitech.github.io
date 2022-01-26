@@ -13,7 +13,7 @@ image:
 
 ## The Jekyll Framework
 
-![](/assets/imgs/jekyll.png){: width="800" height="500" style="max-width: 70%"}
+![Jekyll](/assets/imgs/jekyll.png){: width="800" height="500" style="max-width: 70%"}
 
 [Jekyll](https://jekyllrb.com/) is a website generator. It is a software package written in Ruby. To use it on your own machine, first install Ruby, and then install the package via Ruby gems:
 
