@@ -7,6 +7,9 @@ order: 1
 
 I'm glad to share some of my PDF notes. Subjects include algorithms, machine learning, statistics and probability theory, stochastic process, optimal control theory, general topology and more.
 
+* TOC
+{:toc}
+
 ## Notes on Machine Learning
 
 Common models in machine learning are discussed, including linear regression, logistic regression, Gaussian discriminant analysis, naive Bayes, splines, decision trees, gradient boosting and support vector machines. This notes focus on the mathematical derivation of those models. Highlights:
@@ -90,11 +93,7 @@ Topics include ARMA models, integrated processes and VARMA models.
 
 ## Bilinear Forms and Sesquilinear Forms
 
-In this article, we give a detailed look at bilinear/sesquilinear forms in linear algebra.
-We’re interested in conditions under which a form possesses an orthonormal basis. It turns
-out that this is true if and only if it is (Hermitian) symmetric and positive definite (Theo-
-rem 2.32). We show that the symmetry condition is due to symmetry of orthogonality. We
-then discuss operators and quadratic forms using our theory of bilinear forms.
+In this article, we give a detailed look at bilinear and sesquilinear forms in linear algebra. We’re interested in conditions under which a form possesses an orthonormal basis. It turns out that this is true if and only if it is (Hermitian) symmetric and positive definite. We show that the symmetry condition is due to symmetry of orthogonality. We then discuss operators and quadratic forms using our theory of bilinear forms.
 
 {% include pdf-block.html abbr="bilinear"
                           filename="bilinear-form.pdf" 
