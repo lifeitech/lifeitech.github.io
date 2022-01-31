@@ -33,7 +33,7 @@ jekyll s
 
 and Jekyll will generate static website files (HTML, CSS, JS) that are ready to be served. 
 
-### Liquid 
+### Liquid
 
 Define layouts of different pages of your website using the [Liquid](https://shopify.github.io/liquid/) template language. Liquid lets you write HTML pages in a programmable way. An example below is clear:
 

@@ -5,13 +5,13 @@ categories: [Mathematics]
 tags: [linear-algebra]
 image:
   src: /assets/imgs/double-dual-head.png
-  alt: "Functional Analysis Double Dual"
+  alt: "linear algebra functional analysis double dual"
   width: 800
   height: 500
 math: true
 ---
 
-> We provide a picture for visualizing the concept of double dual in linear algebra. We show that, every vector in a vector space $V$ naturally corresponds to a function that maps functionals on $V$ to numbers, namely evaluation of functionals on that vector. Conversely, thanks to a finite basis, every element in the double dual can be represented as such evaluation function for finite dimensional vector spaces.
+> We provide a picture for visualizing the concept of double dual in linear algebra and functional analysis. We show that, every vector in a vector space $V$ naturally corresponds to a function that maps functionals on $V$ to numbers, namely evaluation of functionals on that vector. Conversely, thanks to a finite basis, every element in the double dual can be represented as such evaluation function for finite dimensional vector spaces.
 
 **Definition (Linear Functional)**&nbsp;&nbsp; Let $V$ be a finite dimensional real vector space. A _linear functional_ on $V$ is a linear map from $V$ to $\mathbb{R}$. 
 Namely, $f:V\to\mathbb{R}$ is a linear functional if 
@@ -48,7 +48,7 @@ $$
 
 The function $\varphi_v$ maps any functional $f\in V^*$ to a real value, while $f$ maps any vector $v\in V$ to a real value. This isomorphism $v\mapsto\varphi_v$ is _canonical_. The picture below provides a visualization of this canonical isomorphism.
 
-![Functional Analysis Double Dual Visualization](/assets/imgs/double-dual-visualization.png){:height=500}
+![Linear Algebra Functional Analysis Double Dual Visualization](/assets/imgs/double-dual-visualization.png){:height=500}
 _Double Dual Visualization. $V$ and $V^{**}$ are isomorphic. For every $v\in V$ there corresponds a $$\varphi_v\in V^{**}$$ that maps any $f\in V^*$ to $f(v)\in\mathbb{R}$._
 
 Each element in $V$ is like a "magnet" that can "attract" linear functionals in $$V^*$$. Imagine we grab some linear functionals $$\{f_1,f_2,\ldots\}$$ from the bag $$V^*$$, and throw them toward a vector $v\in V$. After they hit $v$, they are converted to their "values" at $v$. 
