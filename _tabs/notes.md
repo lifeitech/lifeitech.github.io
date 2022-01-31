@@ -88,6 +88,21 @@ Topics include ARMA models, integrated processes and VARMA models.
                           bottom=false
                           %}
 
+## Bilinear Forms and Sesquilinear Forms
+
+In this article, we give a detailed look at bilinear/sesquilinear forms in linear algebra.
+We’re interested in conditions under which a form possesses an orthonormal basis. It turns
+out that this is true if and only if it is (Hermitian) symmetric and positive definite (Theo-
+rem 2.32). We show that the symmetry condition is due to symmetry of orthogonality. We
+then discuss operators and quadratic forms using our theory of bilinear forms.
+
+{% include pdf-block.html abbr="bilinear"
+                          filename="bilinear-form.pdf" 
+                          title="Bilinear Forms and Sesquilinear Forms"
+                          thumbnails = "8, 14, 18"
+                          bottom=false
+                          %}
+
 ## Some Discussions of Set Theory
 
 In this article, we discuss some elementary facts about set theory. Section 1 contains a
@@ -100,6 +115,6 @@ and then give a discussion of the Continuum Hypothesis.
                           filename="set-theory.pdf" 
                           title="Some Discussions of Set Theory"
                           thumbnails = "2, 5, 10"
-                          bottom=false
+                          bottom=true
                           %}
 
