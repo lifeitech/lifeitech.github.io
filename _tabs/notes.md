@@ -5,7 +5,7 @@ icon: 📕
 order: 1
 ---
 
-I'm glad to share some of my PDF notes. Subjects include algorithms, machine learning, statistics and probability theory, stochastic process, optimal control theory, general topology and more.
+I'm glad to share some of my PDF notes. Subjects include machine learning, algorithms, probability, statistics, stochastic process, optimal control, general topology and more.
 
 * TOC
 {:toc}
@@ -72,6 +72,7 @@ The course followed Erhan Çinlar's book [Probability and Stochastics](https://l
                           %}
 
 ## Course Notes for Microeconometrics
+
 Topics include causality, linear regression, t test and F test, difference in difference (DID), instrumental variables (IV) and regression discontinuity design (RDD).
 
 {% include pdf-block.html abbr="metrics"
@@ -82,7 +83,8 @@ Topics include causality, linear regression, t test and F test, difference in di
                           %}
 
 ## Course Notes for Time Series
-Topics include ARMA models, integrated processes and VARMA models.
+
+The first part of the note is univariate time series analysis. Topics include stationary process, autocovariance function, ARMA models, invertibility, model estimation and forecasting. The second part is multivariate time series analysis. Topics include estimation, forecasting and interpretation of VARMA models.
 
 {% include pdf-block.html abbr="series"
                           filename="time-series.pdf" 
@@ -90,6 +92,18 @@ Topics include ARMA models, integrated processes and VARMA models.
                           thumbnails = "9, 17, 23"
                           bottom=false
                           %}
+
+## Notes for General Topology
+
+This is the course note that I gave to students when I was a teaching assistant for the Mathematical Economics course at Shandong University, where part of the course covered general topology. We start from metric spaces, and then cover all essential concepts in general topology, including basis, convergence, continuity, connectedness, and compactness. We also discuss some advanced topics such as countability, separation properties and Urysohn lemma.
+
+{% include pdf-block.html abbr="topology"
+                          filename="topology.pdf" 
+                          title="Notes for General Topology"
+                          thumbnails = "31, 33, 43"
+                          bottom=false
+                          %}
+
 
 ## Bilinear Forms and Sesquilinear Forms
 
@@ -104,11 +118,7 @@ In this article, we give a detailed look at bilinear and sesquilinear forms in l
 
 ## Some Discussions of Set Theory
 
-In this article, we discuss some elementary facts about set theory. Section 1 contains a
-review of algebra of sets, functions, and power sets. Section 2 discusses Russell’s paradox,
-following which we mention the axiom of specification in ZFC set theory. Sections 3 is on
-countability and uncountability of sets. There we prove basic properties of countable sets,
-and then give a discussion of the Continuum Hypothesis.
+In this article,  we give a quick introduction to set theory. Section 1 contains a review of algebra of sets, functions, and power sets. Section 2 discusses Russell’s paradox, following which we mention the axiom of specification in ZFC set theory. Sections 3 is on countability and uncountability of sets. There we prove basic properties of countable sets, and then give a discussion of the Continuum Hypothesis.
 
 {% include pdf-block.html abbr="set"
                           filename="set-theory.pdf" 
@@ -116,4 +126,3 @@ and then give a discussion of the Continuum Hypothesis.
                           thumbnails = "2, 5, 10"
                           bottom=true
                           %}
-
