@@ -116,13 +116,13 @@ In this article, we give a detailed look at bilinear and sesquilinear forms in l
                           bottom=false
                           %}
 
-## Some Discussions of Set Theory
+## An Introduction to Set Theory
 
-In this article,  we give a quick introduction to set theory. Section 1 contains a review of algebra of sets, functions, and power sets. Section 2 discusses Russell’s paradox, following which we mention the axiom of specification in ZFC set theory. Sections 3 is on countability and uncountability of sets. There we prove basic properties of countable sets, and then give a discussion of the Continuum Hypothesis.
+In this article,  we give a quick introduction to set theory. Section 1 contains a review of algebra of sets, functions, and power sets. Section 2 discusses Russell’s paradox, following which we mention the axiom of specification in ZFC set theory. Sections 3 is on countability and uncountability of sets. We prove basic properties of countable sets, and then give a discussion of the Continuum Hypothesis.
 
 {% include pdf-block.html abbr="set"
                           filename="set-theory.pdf" 
-                          title="Some Discussions of Set Theory"
+                          title="An Introduction to Set Theory"
                           thumbnails = "2, 5, 10"
                           bottom=true
                           %}
