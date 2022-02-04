@@ -4,7 +4,7 @@ date: 2022-01-20 22:37:00 +0800
 categories: [Mathematics]
 tags: [topology]
 image:
-  src: /assets/imgs/deformation-retraction.png
+  src: /assets/imgs/deformation-retraction/head.png
   alt: "deformation retractions algebraic topology"
   width: 800
   height: 500
