@@ -4,7 +4,7 @@ icon: ⚡
 order: 5
 ---
 
-<img id="about" width="800" height="500" alt="about image">
+<img id="about" src="/assets/imgs/about/6.jpg" width="800" height="500" alt="about image">
 
 Hi, welcome to my website. My name is Fei Li (李飞). Currently, I work at the Agricultural Bank of China (headquarter) in Beijing. I obtained my Msc. degree in Data Science and Business Analytics from Bocconi University in 2020, and my bachelor degree in economics from Shandong University in 2017.
 
