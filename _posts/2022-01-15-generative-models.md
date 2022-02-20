@@ -2,7 +2,7 @@
 title: "Generative Models: from Noise to Data" 
 date: 2022-01-15 13:25:00 +0800
 categories: [Data Science]
-tags: [deep-learning, generative-model]
+tags: [generative-model, gan, vae, flow]
 image:
   src: /assets/imgs/cat-gen.png
   alt: "Generative Models: from Noise to Data"

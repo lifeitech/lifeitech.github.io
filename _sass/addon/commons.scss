@@ -47,8 +47,10 @@ body {
 
 h1 {
   @extend %heading;
-
   font-size: 1.9rem;
+  a {
+    @extend %heading;
+  }
 }
 
 h2 {
@@ -700,6 +702,8 @@ $sidebar-display: "sidebar-display";
   }
 
   .nav-item {
+    // align-items: center;
+    // margin: auto;
     text-align: left;
     margin-left: 60px;
     display: table;
