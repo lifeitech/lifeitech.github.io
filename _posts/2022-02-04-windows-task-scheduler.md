@@ -10,7 +10,7 @@ image:
   height: 500
 ---
 
-> If you are using the windows operating system, do you know you can use the Task Scheduler application to run tasks at specific time? In this post I will show you how to do this. We'll also look at how to mute and unmute computer, play music, and open websites, all in the command line.
+> If you are using the windows operating system, do you know you can use the Task Scheduler application to run tasks at specific time? In this post I will show you how to do this. We'll also look at how to mute and unmute computer, play music, and open websites, all through the command line.
 
 ## Set up a task in Task Scheduler
 
