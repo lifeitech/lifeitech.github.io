@@ -1,8 +1,8 @@
 ---
 title: Deformation Retractions are 「Continuous」 Retractions
 date: 2022-01-20 22:37:00 +0800
-categories: [Mathematics]
-tags: [topology]
+categories: [Others]
+tags: [math, topology]
 image:
   src: /assets/imgs/deformation-retraction/head.png
   alt: "deformation retractions algebraic topology"

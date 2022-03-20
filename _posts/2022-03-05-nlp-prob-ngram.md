@@ -4,7 +4,7 @@ date: 2022-03-05 16:20:00 +0800
 categories: [Data Science]
 tags: [nlp, n-gram]
 image:
-  src: /assets/imgs/nlp.jpg
+  src: /assets/imgs/nlp-head.jpg
   alt: "Natural Language Processing, Probabilities and the n-gram Model"
   width: 800
   height: 500
@@ -23,7 +23,7 @@ We want a model to acquire useful statistics from training data, yet mere statis
 
 In probabilistic language modeling, the goal is to
 
-<div style="font-size:20pt;text-align:center;border:3px solid red;margin:5pt;">
+<div style="font-size:20pt; text-align:center; border:3px solid red; margin:2pt;">
 assign probabilities to sentences.  
 </div>
 
@@ -72,13 +72,13 @@ An implementation detail: we shall add `<s>` and `</s>` to the beginning and end
 
 This is basically the n-gram model. Just count.
 
-### Discussions
+### Drawbacks and remedies
 
 n-gram models, while being simple, have obvious drawbacks.
 
 1. Words in a sentence can have *long-distance dependencies*, for example I can insert clauses into a sentence, to separate the subject and the object. Just like natural images are not likely to be color gradients, a paragraph is unlikely to develop in a linear, continuous and predictable way. In other words, languages, like many other high dimensional data, are highly *nonlinear*. The Markov assumption is the very drawback to this. 
 
-2. Since the model is a primitive statistics of the training data, it falls short of predicting anything that are not in the training data. Training data can only be sparse in data space, but any good AI model need the ability to generalize. One common remedy to this is to do smoothing to the probabilities. 
+2. Since the model is a primitive statistics of the training data, it falls short of predicting anything that are not in the training data. Training data can only be sparse in data space, but any good AI model should have the ability to generalize. One common remedy to this is to do smoothing to the probabilities. 
 
     (a) Laplace (or add-one) smoothing -- add one to each count:
 
@@ -104,4 +104,7 @@ n-gram models, while being simple, have obvious drawbacks.
     $$
 
     where $\lambda_1+\lambda_2+\lambda_3=1$.
+
+
+
 

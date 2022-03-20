@@ -4,10 +4,10 @@
 
 @mixin light-scheme {
   /* Framework color */
-  --body-bg: #fafafa;
-  --mask-bg: #c1c3c5;
-  --main-wrapper-bg: white;
-  --main-border-color: #f3f3f3;
+  --body-bg: white; //#fafafa
+  // --mask-bg: #c1c3c5; //#c1c3c5;
+  --main-wrapper-bg: #F2FBF6; //white;   // this is the body background color.
+  --main-border-color: #f3f3f3; //#f3f3f3;
 
   /* Common color */
   --text-color: black;
@@ -16,7 +16,7 @@
   --blockquote-border-color: #eee;
   --blockquote-text-color: #9a9a9a;
   // link-hover color is defined in module.css
-  --link-color: #001e96;  // the color when there is a link; also the post title color in homepage
+  --link-color: #001e96;  // the color when there is a link.
   --link-underline-color: #dee2e6;
   --button-bg: #fff;
   --btn-border-color: #e9ecef;
@@ -29,7 +29,8 @@
   /* Sidebar */
   // --sidebar-bg: linear-gradient(170deg, yellow, red);
   // --sidebar-bg: #2986cc;
-  --sidebar-bg: linear-gradient(180deg, red, #001e96);
+  // --sidebar-bg: linear-gradient(180deg, #c82a35, #001e96);
+  --sidebar-bg: linear-gradient(180deg, #0FD387, #102141);
   --sidebar-muted-color: white;
   --sidebar-active-color: white;
   --nav-cursor-color: white;
@@ -37,7 +38,7 @@
 
   /* Topbar */
   --topbar-text-color: rgb(78, 78, 78);
-  --topbar-wrapper-bg: white;
+  --topbar-wrapper-bg: #F2FBF6;
   --search-wrapper-bg: rgb(245 245 245 / 50%);
   --search-wrapper-border-color: rgb(245 245 245);
   --search-tag-bg: #f8f9fa;
@@ -47,8 +48,8 @@
   /* Home page */
   --post-list-text-color: dimgray;
   --btn-patinator-text-color: #555555;
-  --btn-paginator-hover-color: #001e96; // paginator button color
-  --btn-paginator-border-color: #001e96; // paginator button color
+  --btn-paginator-hover-color: #102141; // paginator button color
+  --btn-paginator-border-color: #102141; // paginator button color
   --btn-text-color: white;
   --pin-bg: #f5f5f5;
   --pin-color: #999fa4;
@@ -68,6 +69,19 @@
   --tb-border-color: #eaeaea;
   --dash-color: silver;
   --preview-img-bg: radial-gradient(circle, rgb(255 255 255) 0%, rgb(249 249 249) 100%);
+  --prompt-text-color: rgb(46 46 46 / 77%);
+  --prompt-tip-bg: rgb(123 247 144 / 20%);
+  --prompt-tip-icon-color: #03b303;
+  --prompt-info-bg: #e1f5fe;
+  --prompt-info-icon-color: #0070cb;
+  --prompt-warning-bg: rgb(255 243 205);
+  --prompt-warning-icon-color: #ef9c03;
+  --prompt-danger-bg: rgb(248 215 218 / 56%);
+  --prompt-danger-icon-color: #df3c30;
+
+  [class^=prompt-] {
+    --link-underline-color: rgb(219 216 216);
+  }
 
   /* Categories */
   --categories-hover-bg: var(--btn-border-color);

@@ -1,8 +1,8 @@
 ---
 title: Visualizing the Double Dual
 date: 2022-01-29 19:05:00 +0800
-categories: [Mathematics]
-tags: [linear-algebra, functional-analysis]
+categories: [Others]
+tags: [math, linear-algebra, functional-analysis]
 image:
   src: /assets/imgs/double-dual-head.png
   alt: "linear algebra functional analysis double dual"
