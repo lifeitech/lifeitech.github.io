@@ -1,6 +1,6 @@
 ---
 title: Embeddings and the word2vec Method
-date: 2022-03-13 9:00:00 +0800
+date: 2022-03-20 9:00:00 +0800
 categories: [Data Science]
 tags: [nlp, tf-idf, word2vec]
 image:
