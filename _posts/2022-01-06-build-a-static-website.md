@@ -83,7 +83,7 @@ The basic structure in your website folder is typically as follows.
 
 - You can put all your files like images and pdf documents in an `assets` folder.
 
-- You may wish to add some elements and functionalities to your website, like a banner, footer, paginator, word counts, share buttons and so on. You define each of them in `_includes` folder. Then you can include them in your layout by putting 
+- You may wish to add some partials to your website, like a banner, footer, paginator, word counts, share buttons and so on. You define each of them in `_includes` folder. Then you can include them in your layout by putting 
 
   {% raw %}
   ```liquid
@@ -92,6 +92,9 @@ The basic structure in your website folder is typically as follows.
   {% endraw %}
 
   in your layout file.
+
+> The `include` tag is deprecated in Liquid `5.00`, and it is advised to use the `render` tag instead. As of 2022, Jekyll is still using Liquid version `4`, but may switch to version `5` in the future.
+{: .prompt-info }
 
 ### Themes
 

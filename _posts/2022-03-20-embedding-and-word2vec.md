@@ -28,7 +28,7 @@ $$
 \cos(v, w) = \frac{v\cdot w}{\|v\|\|w\|}.
 $$
 
-Let's now think about informaiton retrieval. Given a query $q=(w_1,\ldots,w_n)$, we need to rank the collection of documents $D$. The most straightforward way is to assign each document $d$ a value for $w_1$, a value for $w_2$, and so on, and add them up, to get a final value for $d$. Then we rank documents in $D$ according to the outputs of this (linear) ranking function.
+Let's now think about information retrieval. Given a query $q=(w_1,\ldots,w_n)$, we need to rank the collection of documents $D$. The most straightforward way is to assign each document $d$ a value for $w_1$, a value for $w_2$, and so on, and add them up, to get a final value for $d$. Then we rank documents in $D$ according to the outputs of this (linear) ranking function.
 
 How to assign a value to $(w,d)$ to represent relevance of word $w$ to document $d$? i.e., how to assign entry values in Table 1? The most straightforward approach is to count the number of times that $w$ appears in $d$:
 
@@ -112,13 +112,13 @@ Note that, in the end, for each word, two set of parameters are learned because 
 ## Neural language models
 Once we have word embeddings, we can use them as inputs to neural networks models, for modeling probabilities on words and sentences. Embeddings should produce better generalization than primitive models like $n$-gram models. For example, suppose in the training data we have the sentence 
 
-"I have to make sure that the *cat* gets fed", 
+"make sure that the electric *car* gets charged",
 
 and our test set has 
 
-"I forgot to make sure that the *dog* gets [   ]".
+"make sure that the electric *vehicle* gets [   ]".
 
-Since there is no ''dog gets....'' in the training data, an $n$-gram model would be unable to infer a reasonable prediction from the training data. But a neural language model, knowing that ''cat'' and ''dog'' have similar embeddings, should be able to generalize from the ''cat'' context to assign a high enough probability to ''fed'' following ''dog''. 
+Suppose the word "vehicle" is in the training set for the embedding, but there is no ''vehicle gets....''. An $n$-gram model would be unable to infer a reasonable prediction from the training data. But a neural language model, knowing that ''car'' and ''vehicle'' have similar embeddings, should be able to generalize from the ''car'' context to assign a high enough probability to ''charged'' following ''vehicle''. 
 
 Embeddings can also be learned during training. We can also initialize $\vert V\vert$ embeddings, each of dimension $d$, and directly feed them into a neural network, without using embeddings pretrained by e.g. word2vec. In other words, we can encode each word as a one-hot vector $x$ of size $\vert V\vert\times1$, with value $1$ in some index and $0$ otherwise, and initialize a random $d\times\vert V\vert$ matrix $E$ as the embedding matrix. The product $Ex$ then selects the embedding for word $x$. The language model becomes
 
@@ -135,6 +135,11 @@ See Figure 1. The model is initialized with random weights. Training proceeds by
 
 ![neural language model](/assets/imgs/neural-language-model.png){: width=400 height=400}
 _Figure 1: Neural language model_
+
+
+## Summary
+
+By embedding words into real vector spaces in a way that reflects their relations in training corpus, we are able to utilize model continuity for better generalization over [n-gram](https://lifei.tech/posts/nlp-prob-ngram/#probabilities-and-the-n-gram-model) models: a small input variation should yield a small output variation. word2vec is one such method, where a word vector is learned by distinguishing between its surrounding contexts and random noises. On the other hand, we can see from the figure above that the language model is data savvy: a large amount of training data is needed to cover all words and all possible contexts. If a word never appears in the training corpus, its embedding would not be learned. The model is still very "coarse", and processes limited capacity such that problems like long term dependency are not addressed.
 
 ## References
 
