@@ -1,10 +1,10 @@
 ---
 title: Sequence Labeling with HMM and CRF
-date: 2022-03-24 18:40:00 +0800
+date: 2022-03-26 13:18:00 +0800
 categories: [Data Science]
 tags: [nlp, hmm, crf]
 image:
-  src: /assets/imgs/seq-labeling.jpg
+  src: /assets/imgs/seq-labeling.png
   alt: "Sequence Labeling with HMM and CRF"
   width: 800
   height: 500
@@ -62,8 +62,10 @@ $$
 
 See Figure 1 for an illustration of the algorithm. As it's clear from the description above, its running time is $$\vert S\vert^2\cdot n$$. For a sequence $$Y=y_1\ldots y_n$$ with length $$n$$ where each $$y_i$$ can be any element in $$\{y_1,\ldots,y_S\}$$, there are $$\vert S\vert^n$$ such paths in total. Without the Viterbi algorithm, finding the argmax would require an exponential amount of computation. With savings of intermediate results in memory, we are able to reduce a large amount of computation.
 
-![Illustration of the Viterbi Algorithm](/assets/imgs/viterbi.png){: width=400}
-_Figure 1: Illustration of the Viterbi Algorithm_
+![Hiden Markov Model (HMM) - Illustration of the Viterbi Algorithm](/assets/imgs/viterbi.png){: width=400}
+_Figure 1: Illustration of the Viterbi Algorithm for solving Hiden Markov Model (HMM). The model is a generative model. To select the most probable output sequence $Y$, we select $Y$ that makes text sequence $X$ most probable._
+
+<!-- To select the most probable output sequence Y, we select Y that makes text sequence X most probable. -->
 
 ## Conditional Random Field (CRF)
 CRF is discriminative. It attempts to directly model $\mathbb{P}(Y\mid X)$ with multi-class logistic regression. The only difference is that features take into account not only datapoints $(x_i,y_i)$ in isolation but also $y_{i-1}$, the previous label. Let $\mathcal{Y}$ denote the set of all possible output sequences $Y$ with length $n$, which has an exponential size $|S|^n$. The model is
