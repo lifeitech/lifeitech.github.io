@@ -106,11 +106,11 @@ $$
 
 The word2vec embedding method is an example of [Noise Contrastive Estimation](https://lifei.tech/posts/nce/). When we need to learn parameters of a non-discriminative model for which we do not have an easy objective, we can convert the problem to a binary classification task and let the model learn to distinguish between positive training samples and noises. Here, a positive sample $(w,c)$ simply consists of a word $w$ and a surrounding word $c$. The weight $w\in\mathbb{R}^d$ is learned so that it is similar (i.e. has a large dot product value) to its surroundings in the training corpus.
 
-Note that, in the end, for each word, two set of parameters are learned because a word can be either a word for which we want to have an embedding, and a context or noise for other words. Thus if we denote the vocabulary set as $V$, then the output of the algorithm is a matrix of $2\vert V\vert$ vectors, each of dimension $d$, formed by concatenating the target embedding $W$ and the contex $+$ noise embedding $C$. It is common to add them together, representing word $i$ with the vector $w_i+c_i$. Alternatively we can throw away the $C$ matrix and just represent each word $i$ by the vector $w_i$.
+Note that, in the end, for each word, two set of parameters are learned because a word can be either a word for which we want to have an embedding, and a context or noise for other words. Thus if we denote the vocabulary set as $V$, then the output of the algorithm is a matrix of $2\vert V\vert$ vectors, each of dimension $d$, formed by concatenating the target embedding $W$ and the context $+$ noise embedding $C$. It is common to add them together, representing word $i$ with the vector $w_i+c_i$. Alternatively we can throw away the $C$ matrix and just represent each word $i$ by the vector $w_i$.
 
 
 ## Neural language models
-Once we have word embeddings, we can use them as inputs to neural networks models, for modeling probabilities on words and sentences. Embeddings should produce better generalization than primitive models like $n$-gram models. For example, suppose in the training data we have the sentence 
+Once we have word embeddings, we can use them as inputs to neural networks models, for modeling probabilities on words and sentences. Embeddings should produce better generalization than primitive models like [$n$-gram models](https://lifei.tech/posts/nlp-prob-ngram/#probabilities-and-the-n-gram-model). For example, suppose in the training data we have the sentence 
 
 "make sure that the electric *car* gets charged",
 
@@ -120,7 +120,7 @@ and our test set has
 
 Suppose the word "vehicle" is in the training set for the embedding, but there is no ''vehicle gets....''. An $n$-gram model would be unable to infer a reasonable prediction from the training data. But a neural language model, knowing that ''car'' and ''vehicle'' have similar embeddings, should be able to generalize from the ''car'' context to assign a high enough probability to ''charged'' following ''vehicle''. 
 
-Embeddings can also be learned during training. We can also initialize $\vert V\vert$ embeddings, each of dimension $d$, and directly feed them into a neural network, without using embeddings pretrained by e.g. word2vec. In other words, we can encode each word as a one-hot vector $x$ of size $\vert V\vert\times1$, with value $1$ in some index and $0$ otherwise, and initialize a random $d\times\vert V\vert$ matrix $E$ as the embedding matrix. The product $Ex$ then selects the embedding for word $x$. The language model becomes
+Embeddings can also be learned during training. We can initialize $\vert V\vert$ embeddings, each of dimension $d$, and directly feed them into a neural network, without using embeddings pretrained by e.g. word2vec. In other words, we can encode each word as a one-hot vector $x$ of size $\vert V\vert\times1$, with value $1$ in some index and $0$ otherwise, and initialize a random $d\times\vert V\vert$ matrix $E$ as the embedding matrix. The product $Ex$ then selects the embedding for word $x$. The language model becomes
 
 $$
 \begin{align*}
@@ -139,7 +139,7 @@ _Figure 1: Neural language model_
 
 ## Summary
 
-By embedding words into real vector spaces in a way that reflects their relations in training corpus, we are able to utilize model continuity for better generalization over [n-gram](https://lifei.tech/posts/nlp-prob-ngram/#probabilities-and-the-n-gram-model) models: a small input variation should yield a small output variation. word2vec is one such method, where a word vector is learned by distinguishing between its surrounding contexts and random noises. On the other hand, we can see from the figure above that the language model is data savvy: a large amount of training data is needed to cover all words and all possible contexts. If a word never appears in the training corpus, its embedding would not be learned. The model is still very "coarse", and processes limited capacity such that problems like long term dependency are not addressed.
+By embedding words into real vector spaces in a way that reflects their relations in training corpus, we are able to utilize model continuity for better generalization over $n$-gram models: a small input variation should yield a small output variation. word2vec is one such method, where a word vector is learned by distinguishing between its surrounding contexts and random noises. On the other hand, we can see from the figure above that the language model is data hungry: a large amount of training data is needed to cover all words and all possible contexts. If a word never appears in the training corpus, its embedding would not be learned. The model is still very "coarse", and processes limited capacity such that problems like long term dependency are not addressed.
 
 ## References
 
