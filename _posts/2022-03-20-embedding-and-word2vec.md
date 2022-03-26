@@ -28,7 +28,7 @@ $$
 \cos(v, w) = \frac{v\cdot w}{\|v\|\|w\|}.
 $$
 
-Let's now think about information retrieval. Given a query $q=(w_1,\ldots,w_n)$, we need to rank the collection of documents $D$. The most straightforward way is to assign each document $d$ a value for $w_1$, a value for $w_2$, and so on, and add them up, to get a final value for $d$. Then we rank documents in $D$ according to the outputs of this (linear) ranking function.
+Let's now think about information retrieval. Given a query $q=(w_1,\ldots,w_n)$, we need to rank the collection of documents $D$. The most straightforward way is to assign each document $d$ a value for $w_1$, a value for $w_2$, and so on, and add them up, to get a final value for $d$. Then ank documents in $D$ according to the outputs of this (linear) ranking function.
 
 How to assign a value to $(w,d)$ to represent relevance of word $w$ to document $d$? i.e., how to assign entry values in Table 1? The most straightforward approach is to count the number of times that $w$ appears in $d$:
 
@@ -64,7 +64,7 @@ The higher the score, the more relevant that word is in that particular document
 To summerize, TF-IDF is basically word count in a document, adjusted by some functions and document frequencies.
 
 ## word2vec
-From the viewpoint of embedding, the TF-IDF method produces *sparse* vectors (Table 1), with most entries being zero. In contrast, the word2vec method [[1]](#1) produces *dense* word vectors, typically of dimension $50\sim1000$. Actually we are referring to *skip-gram with negative sampling* in the word2vec software package, but it is often loosely referred to as word2vec. 
+From the viewpoint of embedding, the TF-IDF method produces *sparse* vectors (Table 1), with most entries being zero. In contrast, the word2vec method [[1]](#1) produces *dense* word vectors, typically of dimension $50\sim1000$. Actually we are referring to "skip-gram with negative sampling" in the word2vec software package, but it is often loosely referred to as word2vec. 
 
 First randomly initialize some word as a vector $w\in\mathbb{R}^d$. Define a binary classification task as follows: given $w\in\mathbb{R}^d$, predict if $c\in\mathbb{R}^d$ is a context word, i.e. if it should generally appear near $w$ in text data. Define the probability of being positive as
 
@@ -112,11 +112,11 @@ Note that, in the end, for each word, two set of parameters are learned because 
 ## Neural language models
 Once we have word embeddings, we can use them as inputs to neural networks models, for modeling probabilities on words and sentences. Embeddings should produce better generalization than primitive models like [$n$-gram models](https://lifei.tech/posts/nlp-prob-ngram/#probabilities-and-the-n-gram-model). For example, suppose in the training data we have the sentence 
 
-"make sure that the electric *car* gets charged",
+"...make sure that the electric *car* gets charged",
 
 and our test set has 
 
-"make sure that the electric *vehicle* gets [   ]".
+"...make sure that the electric *vehicle* gets [   ]".
 
 Suppose the word "vehicle" is in the training set for the embedding, but there is no ''vehicle gets....''. An $n$-gram model would be unable to infer a reasonable prediction from the training data. But a neural language model, knowing that ''car'' and ''vehicle'' have similar embeddings, should be able to generalize from the ''car'' context to assign a high enough probability to ''charged'' following ''vehicle''. 
 
