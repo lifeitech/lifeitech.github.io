@@ -3,6 +3,16 @@ layout: page
 # The Home page layout
 ---
 
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@lifeitech">
+<meta name="twitter:creator" content="@lifeitech">
+
+<meta property="og:image" content="{{site.image | absolute_url}}">
+<meta property="og:title" content="{{site.title}}">
+<meta property="og:description" content="{{site.description}}">
+<meta property="og:url" content="{{site.url | absolute_url}}">
+<meta property="og:type" content="article">
+
 {% include lang.html %}
 
 {% assign pinned = site.posts | where: "pin", "true" %}

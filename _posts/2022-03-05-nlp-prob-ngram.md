@@ -11,7 +11,7 @@ image:
 math: true
 ---
 
-> This is the first of a series of posts on Natural Language Processing (NLP). We give an introduction to the subject, mention two model evaluation methods, see how to assign probabilities to words and sentences, and learn the most basic model ------ the n-gram model in NLP.
+> This is the first one of a series of posts on Natural Language Processing (NLP). We give an introduction to the subject, mention two model evaluation methods, see how to assign probabilities to words and sentences, and learn the most basic model ------ the n-gram model in NLP.
 
 ## Introduction
 
