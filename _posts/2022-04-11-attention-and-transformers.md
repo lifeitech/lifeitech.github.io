@@ -154,11 +154,11 @@ While pushing the boundary of neural network models by boosting model size is pe
 <a id="5">[5]</a> Devlin, Jacob, et al. "Bert: Pre-training of deep bidirectional transformers for language understanding." _arXiv preprint arXiv:1810.04805_ (2018).
 
 <!-- ViT -->
-<a id="6">[6]</a> Dosovitskiy, Alexey, et al. "An image is worth 16x16 words: Transformers for image recognition at scale." arXiv preprint arXiv:2010.11929 (2020).
+<a id="6">[6]</a> Dosovitskiy, Alexey, et al. "An image is worth 16x16 words: Transformers for image recognition at scale." _arXiv preprint arXiv:2010.11929_ (2020).
 
 <!-- MAE -->
-<a id="7">[7]</a> He, Kaiming, et al. "Masked autoencoders are scalable vision learners." arXiv preprint arXiv:2111.06377 (2021).
+<a id="7">[7]</a> He, Kaiming, et al. "Masked autoencoders are scalable vision learners." _arXiv preprint arXiv:2111.06377_ (2021).
 
-<a id="8">[8]</a> Yuan, Lu, et al. "Florence: A New Foundation Model for Computer Vision." arXiv preprint arXiv:2111.11432 (2021).
+<a id="8">[8]</a> Yuan, Lu, et al. "Florence: A New Foundation Model for Computer Vision." _arXiv preprint arXiv:2111.11432_ (2021).
 
-<a id="9">[9]</a> Chowdhery, Aakanksha, et al. "PaLM: Scaling Language Modeling with Pathways." arXiv preprint arXiv:2204.02311 (2022).
+<a id="9">[9]</a> Chowdhery, Aakanksha, et al. "PaLM: Scaling Language Modeling with Pathways." _arXiv preprint arXiv:2204.02311_ (2022).
