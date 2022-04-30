@@ -150,3 +150,16 @@ in the command line to convert your Python script to a  single `.exe` executable
 ## Summary
 
 In this post, I showed how to use the Task Scheduler application in windows. With Task Scheduler, it is possible to execute scripts and programs when specific conditions are met. This can automate your routines and save your time and energy, setting you free from repetitive tasks. I discussed some examples, like playing an audio file and open several websites at once. If you find yourself repeating the same tasks very often on your PC, it may be a good idea to write them down in a script, and execute the script as needed.
+
+<hr>
+Cite as:
+
+```bibtex
+@article{lifei2022scheduler,
+  title   = "{{ page.title }}",
+  author  = "Li, Fei",
+  journal = "www.lifei.tech",
+  year    = "2022",
+  url     = "{{ page.url | absolute_url }}"
+}
+```

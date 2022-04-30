@@ -105,3 +105,16 @@ and again we use the Viterbi algorithm for this sequence maximization problem.
 ## Summary
 
 In this post, we introduced two models for solving sequence labeling problem in NLP: Hidden Markov Model (HMM) and Conditional Random Field (CRF). HMM maximizes $\mathbb{P}(Y\mid X)$ by maximizing $\mathbb{P}(X\mid Y)\mathbb{P}(Y)$, while CRF models $\mathbb{P}(Y\mid X)$ with features. Both models take $y_{i-1}$ into account when calculating probability on $y_i$. Both use the Viterbi algorithm for deriving the optimal output sequence $Y=y_1\ldots y_n$.
+
+<hr>
+Cite as:
+
+```bibtex
+@article{lifei2022hmm,
+  title   = "{{ page.title }}",
+  author  = "Li, Fei",
+  journal = "www.lifei.tech",
+  year    = "2022",
+  url     = "{{ page.url | absolute_url }}"
+}
+```

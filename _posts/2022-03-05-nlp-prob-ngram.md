@@ -109,3 +109,16 @@ n-gram models, while being simple, have obvious drawbacks.
 ## Summary
 
 NLP is about teaching machines to extract information from texts, to classify texts, to generate texts, and to translate texts. The core ability that we want a model to acquire is the ability to generalize. We want a model to have enough intelligence and flexibility to handle all kinds of variations in downstream tasks that may not be present in the training data. Language models output probabilities over words. n-gram model is the simplest language model, which is essentially a primitive statistical summary of the training data. Although insufficient, it serves as a benchmark for more advanced models.
+
+<hr>
+Cite as:
+
+```bibtex
+@article{lifei2022ngram,
+  title   = "{{ page.title }}",
+  author  = "Li, Fei",
+  journal = "www.lifei.tech",
+  year    = "2022",
+  url     = "{{ page.url | absolute_url }}"
+}
+```

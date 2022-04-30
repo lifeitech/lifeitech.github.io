@@ -1,7 +1,7 @@
 ---
 title: Deformation Retractions are 「Continuous」 Retractions
 date: 2022-01-20 22:37:00 +0800
-categories: [Others]
+categories: [Math & Natural Sciences]
 tags: [math, topology]
 image:
   src: /assets/imgs/deformation-retraction/head.png
@@ -91,3 +91,16 @@ From the above discussion we find that, for a deformation retraction $$r:X\to A$
 ## Summary
 
 In this post, I presented definitions of retractions and deformation retractions in algebraic topology, and illustrated their differences by several examples. We can generalize deformation retraction to the concept of homotopy equivalence.
+
+<hr>
+Cite as:
+
+```bibtex
+@article{lifei2022retraction,
+  title   = "{{ page.title }}",
+  author  = "Li, Fei",
+  journal = "www.lifei.tech",
+  year    = "2022",
+  url     = "{{ page.url | absolute_url }}"
+}
+```

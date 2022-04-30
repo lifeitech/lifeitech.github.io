@@ -5,7 +5,7 @@ icon: 📕
 order: 1
 ---
 
-I'm glad to share some of my PDF notes. Subjects include machine learning, algorithms, probability, statistics, stochastic process, optimal control, general topology and more.
+I'm glad to share some of my course notes. Subjects include machine learning, algorithms, probability, statistics, stochastic process, optimal control, general topology and more.
 
 * TOC
 {:toc}

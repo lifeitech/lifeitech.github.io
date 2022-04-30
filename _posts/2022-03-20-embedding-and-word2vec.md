@@ -141,6 +141,19 @@ _Figure 1: Neural language model_
 
 By embedding words into real vector spaces in a way that reflects their relations in training corpus, we are able to utilize model continuity for better generalization over $n$-gram models: a small input variation should yield a small output variation. word2vec is one such method, where a word vector is learned by distinguishing between its surrounding contexts and random noises. On the other hand, we can see from the figure above that the language model is data hungry: a large amount of training data is needed to cover all words and all possible contexts. If a word never appears in the training corpus, its embedding would not be learned. The model is still very "coarse", and processes limited capacity such that problems like long term dependency are not addressed.
 
+<hr>
+Cite as:
+
+```bibtex
+@article{lifei2022embedding,
+  title   = "{{ page.title }}",
+  author  = "Li, Fei",
+  journal = "www.lifei.tech",
+  year    = "2022",
+  url     = "{{ page.url | absolute_url }}"
+}
+```
+
 ## References
 
 <a id="1">[1]</a> Mikolov, Tomas, et al. "Efficient estimation of word representations in vector space." *arXiv preprint arXiv:1301.3781* (2013).

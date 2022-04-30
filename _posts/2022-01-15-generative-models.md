@@ -67,8 +67,8 @@ $$
 \begin{split}
 \log p_\alpha(x) &= \log \int p_\alpha(x\mid z)p_Z(z)dz\\
 &= \log \int q_\phi(z\mid x)\frac{p_\alpha(x\mid z)p_Z(z)}{q_\phi(z\mid x)}dz\\
-&\geq \int q_\phi(z\mid x)\log\frac{p_\alpha(x\mid z)p_Z(z)}{q_\phi(z\mid x)}dz\\
-&= \mathbb{E}_{z\sim q_\phi(z\mid x)}\log p_\alpha(x\mid z) - KL[ q_\phi(z\mid x)|| p_Z(z)]\\
+&\geq \int q_\phi(z\mid x)\log\frac{p_\alpha(x\mid z)p_Z(z)}{q_\phi(z\mid x)}dz\\[1em]
+&= \mathbb{E}_{z\sim q_\phi(z\mid x)}\log p_\alpha(x\mid z) - KL[ q_\phi(z\mid x)|| p_Z(z)]\\[1em]
 &=: \mathcal{L}_{\alpha,\phi}(x),
 \end{split}
 $$
@@ -299,8 +299,18 @@ Namely, $\log p_\alpha(\tilde{x})$ can be computed as the log density on noise s
 The formula tells us that after we generate samples $\tilde{x}$ from the flow model through the inverse transformation, we can evaluate the density $p_\alpha(\tilde{x})$ for free. There is no need to go through additional calculations.
 
 
+<hr>
+Cite as:
 
-
+```bibtex
+@article{lifei2022generative,
+  title   = "{{ page.title }}",
+  author  = "Li, Fei",
+  journal = "www.lifei.tech",
+  year    = "2022",
+  url     = "{{ page.url | absolute_url }}"
+}
+```
 
 ## References
 

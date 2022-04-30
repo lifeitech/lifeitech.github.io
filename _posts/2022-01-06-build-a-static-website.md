@@ -153,3 +153,16 @@ However, the biggest problem with medium for tech writers is that, *they have ze
 ## Summary
 
 In this post I introduced how to use Jekyll and GitHub Pages to build and host a static website. In Jekyll you can use the Liquid template language to write your HTML page layouts. Many themes are also available for free. Push your repo named _username.github.io_ to GitHub to serve your website to the public. I also compared developing your own website versus the option of using a third-party website builder or writing on medium. My suggestion is to develop your own site, since this gives you the ultimate flexibility and control.
+
+<hr>
+Cite as:
+
+```bibtex
+@article{lifei2022website,
+  title   = "{{ page.title }}",
+  author  = "Li, Fei",
+  journal = "www.lifei.tech",
+  year    = "2022",
+  url     = "{{ page.url | absolute_url }}"
+}
+```

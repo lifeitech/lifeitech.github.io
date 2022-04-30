@@ -137,6 +137,18 @@ Another noticeable trend in AI research is that, big companies are training ever
 
 While pushing the boundary of neural network models by boosting model size is perfectly legitimate, there are many other important problems to consider. One fundamental problem is, how do neural network models actually work? What do they learn? What is the function of each parameter? Second, how should a model acquire robust generalization ability from less data, just as humans do? And is neural network really the ultimate paradigm for Artificial Intelligence? While current models may still have limited capacity, I'm optimistic that, we should see better and better AI models coming out in the future, and one day machines can have enough intelligence to handle tasks and jobs we do today.
 
+<hr>
+Cite as:
+
+```bibtex
+@article{lifei2022transformers,
+  title   = "{{ page.title }}",
+  author  = "Li, Fei",
+  journal = "www.lifei.tech",
+  year    = "2022",
+  url     = "{{ page.url | absolute_url }}"
+}
+```
 
 ## References
 

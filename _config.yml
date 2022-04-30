@@ -96,6 +96,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-archives
   - jekyll-sitemap
+  - jekyll-scholar
 
 
 # ------------ The following options are not recommended to be modified ------------------

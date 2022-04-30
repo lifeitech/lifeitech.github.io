@@ -1,7 +1,7 @@
 ---
 title: Visualizing the Double Dual
 date: 2022-01-29 19:05:00 +0800
-categories: [Others]
+categories: [Math & Natural Sciences]
 tags: [math, linear-algebra, functional-analysis]
 image:
   src: /assets/imgs/double-dual-head.png
@@ -98,3 +98,16 @@ $$
 We find that $\varphi(f)=f(v)$ for any $$f\in V^*$$. The proof is now complete.
 
 Finally, we mention that, the finite dimensional case that we have discussed above does not generalize to infinite dimensions. If $V$ is an infinite dimensional vector space, then its (algebraic) dual space always has a larger dimension than $V$. The double dual is thus also strictly larger than $V$.
+
+<hr>
+Cite as:
+
+```bibtex
+@article{lifei2022dual,
+  title   = "{{ page.title }}",
+  author  = "Li, Fei",
+  journal = "www.lifei.tech",
+  year    = "2022",
+  url     = "{{ page.url | absolute_url }}"
+}
+```
