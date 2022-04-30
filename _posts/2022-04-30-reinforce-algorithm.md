@@ -3,12 +3,19 @@ title: The REINFORCE Algorithm
 date: 2022-04-30 16:30:00 +0800
 categories: [Data Science]
 tags: [reinforce]
+image:
+  src: /assets/imgs/reinforce.jpg
+  alt: "The REINFORCE Algorithm"
+  width: 800
+  height: 500
 math: true
 ---
 
 > In this short post, we give an introduction to the REINFORCE algorithm.
 
-The REINFORCE algorithm {% cite williams1992simple %} is a method used to evaluate parameter gradients of an expectation that does not depend on the parameter in a differetiable way. In short, it is about moving the gradient operation inside the expectation operation.
+The REINFORCE algorithm {% cite williams1992simple %} is a method used to evaluate parameter gradients of an expectation that does not depend on the parameter in a differentiable way. It comes from reinforcement learning. In such a setting, an agent is in an environment represented by a set of states, and each of his action leads to a reward and the next state. His objective is to choose action sequence that maximize the rewards. He has a parameterized policy function that samples action given a state, and our goal is to learn the parameters of the model. The set of actions available may be discrete, so in this setting we need to backpropagate through a discrete sampling process.
+
+In short, it is about moving the gradient operation inside the expectation operation.
 
 Let $$\mathcal{X}=\{0,1\}^d$$ be a discrete space of dimension $d$, which contains some object of interest. Let $f$ be a real valued function defined on $\mathcal{X}$, and let $p_\alpha$ be a discrete probability density on $\mathcal{X}$ with parameter $\alpha$. We would like to compute 
 
