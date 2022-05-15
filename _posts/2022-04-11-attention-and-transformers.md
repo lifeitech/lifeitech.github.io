@@ -2,7 +2,7 @@
 title: Attention and Transformers
 date: 2022-04-11 22:30:00 +0800
 categories: [Data Science]
-tags: [nlp, transformer]
+tags: [nlp, attention, transformer]
 image:
   src: /assets/imgs/transformers/transformers.jpg
   alt: "Attention and Transformers"
