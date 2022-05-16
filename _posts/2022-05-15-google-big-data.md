@@ -132,7 +132,7 @@ In this post, we learned Google's three technologies that are of crucial importa
 Cite as:
 
 ```bibtex
-@article{lifei2022pyspark,
+@article{lifei2022googlebigdata,
   title   = "{{ page.title }}",
   author  = "Li, Fei",
   journal = "www.lifei.tech",
