@@ -52,7 +52,7 @@ const allowedDomains = [
 
   'fonts.gstatic.com',
   'fonts.googleapis.com',
-  'cdn.jsdelivr.net',
+  'cdnjs.cloudflare.com',
   'polyfill.io'
 ];
 
