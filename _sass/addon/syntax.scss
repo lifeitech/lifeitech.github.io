@@ -112,7 +112,8 @@ code {
 
   a > &.highlighter-rouge {
     padding-bottom: 0; // show link's underlinke
-    color: inherit;
+    // color: inherit;
+    color: var(--highlighter-rouge-color);
   }
 
   a:hover > &.highlighter-rouge {

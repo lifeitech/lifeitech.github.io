@@ -31,7 +31,7 @@ With the framework, you don't have to write *bare* HTML code. You write your blo
 jekyll s
 ```
 
-and Jekyll will generate static website files (HTML, CSS, JS) that are ready to be served. 
+and Jekyll will convert the sources to static website files (HTML, CSS, JS) that are ready to be served. 
 
 ### Liquid
 
@@ -96,6 +96,9 @@ The basic structure in your website folder is typically as follows.
 > The `include` tag is deprecated in Liquid `5.00`, and it is advised to use the `render` tag instead. As of 2022, Jekyll is still using Liquid version `4`, but may switch to version `5` in the future.
 {: .prompt-info }
 
+> If you wonder how Jekyll does the magic under the hood, well, there is no magic. It uses regular expression extensively to recognize each piece of liquid tags and html tags. Rules for recognition and conversion are all hard coded. The framework does all the dirty work so you don't have to worry about them. Refer to [jekyll](https://github.com/jekyll/jekyll) and [kramdown](https://github.com/gettalong/kramdown) source code for detail.
+{: .prompt-info }
+
 ### Themes
 
 At this point, you might have realized that, you still need to write a good amount of code if you want to build a full-fledged website. Luckily, many people have shared their website templates as [themes](https://jekyllrb.com/docs/themes/). You can directly use a theme so that you don't have to start from scratch and worry every details about HTML, CSS and JavaScript, but instead just focus on your content creation. View Jekyll themes at the following websites:
@@ -128,7 +131,7 @@ With a default GitHub account, the repository for your website has to be a publi
 ### Using a custom domain name
 You can use your own domain name by putting the domain name in a file named `CNAME` in your repository. 
 
-In addition, you need to tell your DNS provider to redirect your domain to GitHub servers. You DNS provider is usually the same as your domain provider, e.g. NameCheap, GoDaddy or Google Domains. After all, they don't know where you intent to host your website, being it AWS, Google Cloud, your own machine or GitHub. You have to tell them this information. To do so, login on your domain provider's website and create a `A` resource record, adding IP addresses for GitHub Pages.
+In addition, you need to tell your DNS provider to redirect your domain to GitHub servers. You DNS provider is usually the same as your domain provider, e.g. NameCheap, GoDaddy or Google Domains. After all, they don't know where you intent to host your website, being it AWS, Google Cloud, your own machine or GitHub. You have to tell them this information. To do so, login on your domain provider's website and create an `A` resource record, adding IP addresses for GitHub Pages.
 ```
 185.199.108.153
 185.199.109.153
@@ -136,19 +139,30 @@ In addition, you need to tell your DNS provider to redirect your domain to GitHu
 185.199.111.153
 ```
 
-More instructions are at GitHub Pages [documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+More instructions are available at GitHub Pages [documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
-## Should you Drag and Drop?
+## Should you use Wix/Squarespace?
 
-Should you build your blog website using drag-and-drop website builders like wix and Squarespace? My point of view is, if you know programming, then you should use one of the frameworks like Jekyll (others include Gatsby, Hexo, Hugo). After all, you are building a static website for blogs, not a millionaire web app. You are not dealing with the backends. If you are satisfied with using a theme, just go ahead and you have almost no coding. If you want customization, it's really not that difficult to tweak a little bit HTML and CSS so you control exactly how your website looks. You can decide on your own where to host your website. You can host it via GitHub Pages, or cloud services like AWS and Google Cloud if you prefer. This flexibility can be very helpful if you decide to change your minds later.
+Should you build your blog website using drag-and-drop website builders like wix and Squarespace? My point of view is, if you know programming, then you should use one of the frameworks like Jekyll (others include Gatsby, Hexo, Hugo). After all, you are building a static website for blogs, not a millionaire web app. You are not dealing with the backends. If you are satisfied with using a theme, just go ahead and use it, which doesn't require much coding effort at all. If you want customization, you have the freedom to tweak a little bit HTML and CSS so you control exactly your website's appearance. You can decide on your own where to host your website. You can host it via GitHub Pages, or cloud services like AWS and Google Cloud if you prefer. This flexibility can be very useful if you decide to change your decision later.
 
-If you simply want to write tech blogs, their price is probably a bit too expensive. It can be even more time-consuming to drag around and adjust elements until you are satisfied with the design. It is also difficult to save your work. What if you want to switch to another platform, like from wix to Squarespace, or from wix  to WordPress? Basically you have to start over again. But you never worry about losing your work if you have all your source code at your disposal.
+If you simply want to write tech blogs, their price is probably a bit too expensive. It can be even more time-consuming to drag around and adjust elements until you are satisfied with the design. It is also difficult to save your work. What if you want to switch to another platform, like from wix to Squarespace, or from wix  to WordPress, or to some other platforms? Basically you have to start over again. But you never worry about losing your work if you have all your source code at your disposal.
 
 ## Should you write your blogs on Medium?
 
-Medium is probably the most popular online publishing platform. With publications like [towards data science](https://towardsdatascience.com), it also has a large community of ML/AI lovers. There could be many potential benefits for writing blogs on medium. First, you can actually make money on medium, through the [Medium Partnership Program](https://medium.com/earn). For many people it's even their full-time job.  Second, you benefit from a large pool of audience. It's easier for people to come across your articles.  And third, you are free from all the hassles of writing code in order to build your website. You can just focus on your writings.
+Medium is probably the most popular online publishing platform. With publications like [towards data science](https://towardsdatascience.com), it also has a large community of ML/AI lovers. There could be many potential benefits for writing blogs on medium. First, you can actually make money on medium, through the [Medium Partnership Program](https://medium.com/earn). For many people it's even their full-time job.  Second, you benefit from a large pool of audience. It's easier for people to come across and discover your articles.  And third, you are free from all the hassles of writing code in order to build your website. You can just focus on your writings.
 
-However, the biggest problem with medium for tech writers is that, *they have zero support for LaTeX, as well as code highlighting*. The reason is simple. The majority of users write or read about cars, food, emotions, money and more, but never differential equations or Python programming. People who need to write math equations occupy only a small portion.  Adding those supports means loading additional JS libraries, which can slow down the website and cause troubles for all users. They decide that it's not worthy to do that. The result in the end is that, your article could look *terrible*, especially if you have a lot of inline math and code snippets. Even though you can embed GitHub Gist for some code highlighting, the overall format quality for a math-intensive article is just too bad such that I wouldn't bother.
+However, the biggest problem with medium for tech writers is that, *they have zero support for LaTeX, as well as code highlighting*. The reason is simple. The majority of users write or read about cars, food, emotions, money and more, but never differential equations or Python programming. People who need to write math equations occupy only a small portion.  Adding those supports means loading additional JS libraries, which can slow down the website and cause troubles for all users. They decide that it's not worthy to do that. The result in the end is that, your article could look *terrible*, especially if you have a lot of inline math and code snippets. Even though you can embed GitHub Gist for some code highlighting, the overall format quality for a math-intensive article would look too bad. Other drawbacks include lack of support of the Medium Partnership Program for certain countries.
+
+## Which one to choose
+So I'm not advocating writing math intensive contents like deep learning on current third party platforms. Rather the best way to do so is to create your own website so that you can have exact control of your content qualities. With that said, building your website is not without any effort. There can be bugs in your code that can cost you hours to solve. Sometimes unexpected things happen, like the CDNs you are using are down, for which you have to fix it on your own. Also, it can be more difficult for people to discover and recognize your new website. 
+
+Below is a comparison between the three ways of writing technical blogs. Every way has its pros and cons. When choosing among different options, you have to be clear what is the most important principle to you. Although third party services have made it so convenient to publish your own contents, there are trade-offs for depending on such services, and you have to keep that in mind.
+
+| method | pros | cons |
+| --- | --- | --- |
+| build your own | 🔹flexibility and control<br/>🔹many available themes<br/>🔹low cost | 🔹require programming knowledge<br/>🔹have to debug<br/>🔹difficult to acquire audience |
+| wix/squarespace | 🔹no coding required<br/>🔹platform support | 🔹high cost<br/>🔹lack of flexibility<br/>🔹difficult to transfer to other platforms |
+| medium | 🔹no coding required<br/>🔹more audience<br/>🔹 potential to generate income | 🔹lack of support for math<br/>🔹lack of support for code highlighting<br/>🔹difficult to transfer to other platforms |
 
 ## Summary
 
