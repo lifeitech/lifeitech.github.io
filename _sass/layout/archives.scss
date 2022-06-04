@@ -68,8 +68,9 @@
       }
 
       &:nth-child(odd) {
-        background-color: var(--main-wrapper-bg, #fff);
-        background-image: linear-gradient(to left, #fff, #fbfbfb, #fbfbfb, #fbfbfb, #fff);
+        // background-color: var(--main-wrapper-bg);  // #fff
+        background-image: linear-gradient(to left, var(--main-wrapper-bg), #EAEAEA);
+        // background-image: linear-gradient(to left, #c1c3c5, #fbfbfb, #fbfbfb, #fbfbfb, #c1c3c5);
       }
 
       &::after {
