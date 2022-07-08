@@ -6,7 +6,7 @@
   /* Framework color */
   --body-bg: white; //#fafafa
   // --mask-bg: #c1c3c5; //#c1c3c5;
-  --main-wrapper-bg: #F2FBF6; //white;  #F2FBF6 // this is the body background color.
+  --main-wrapper-bg: #F5F5F5; //white;  #F2FBF6 // this is the body background color.
   --main-border-color: #f3f3f3; //#f3f3f3;
 
   /* Common color */
@@ -30,7 +30,8 @@
   // --sidebar-bg: linear-gradient(170deg, yellow, red);
   // --sidebar-bg: #2986cc;
   // --sidebar-bg: linear-gradient(180deg, #c82a35, #001e96);
-  --sidebar-bg: linear-gradient(180deg, #0FD387, #102141);
+  // --sidebar-bg: linear-gradient(180deg, #0FD387, #102141);
+  --sidebar-bg: linear-gradient(180deg, #001e96, black);
   --sidebar-muted-color: white;
   --sidebar-active-color: white;
   --nav-cursor-color: white;
@@ -38,7 +39,7 @@
 
   /* Topbar */
   --topbar-text-color: rgb(78, 78, 78);
-  --topbar-wrapper-bg: #F2FBF6;
+  --topbar-wrapper-bg: #F5F5F5;
   --search-wrapper-bg: rgb(245 245 245 / 50%);
   --search-wrapper-border-color: rgb(245 245 245);
   --search-tag-bg: #f8f9fa;

@@ -5,6 +5,19 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Fei Li">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="keywords" content="mathematics,data science,machine learning,deep learning,artificial intelligence,scientific computing,programming,python,julia">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lifeitech">
+  <meta name="twitter:creator" content="@lifeitech">
+
+  <meta property="og:image" content="{{site.image | absolute_url}}">
+  <meta property="og:title" content="{{site.title}}">
+  <meta property="og:description" content="{{site.description}}">
+  <meta property="og:url" content="{{site.url | absolute_url}}">
+  <meta property="og:type" content="article">
 
   {% if page.layout == 'home' or page.layout == 'post' %}
 
@@ -39,7 +52,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
-  <!-- GA -->
+  <!-- Google Analytics -->
   {% if jekyll.environment == 'production' %}
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials">
     <link rel="dns-prefetch" href="https://www.google-analytics.com">

@@ -18,7 +18,7 @@ title: Fei Li's Website                         # the main title
 tagline: data science and programming blogs   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Fei Li's data science and programming blogs. New post every week.
+  Fei Li's data science and programming blogs.
 
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
@@ -29,8 +29,8 @@ image: '/assets/imgs/website-post.jpg'
 github:
   username: lifeitech
 
-twitter:
-  username: lifeitech
+# twitter:
+#   username: lifeitech
 
 social:
   # Change to your full name.
@@ -40,7 +40,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://www.lifei.tech
-    - https://twitter.com/lifeitech
+    # - https://twitter.com/lifeitech
     - https://github.com/lifeitech     
     - https://www.linkedin.com/in/lifeipro
 
@@ -89,7 +89,6 @@ disqus:
 paginate: 6
 
 plugins:
-  - jekyll-seo-tag
   - jekyll
   - jekyll-paginate
   - jekyll-redirect-from

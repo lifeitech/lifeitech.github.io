@@ -2,7 +2,10 @@
   The common styles
 */
 // @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @mixin mode-toggle($dark-mode: false) {
   @if $dark-mode {
@@ -42,11 +45,14 @@ html[mode=dark] {
 }
 
 body {
-  line-height: 1.75rem;
+  // line-height: 1.75rem;
   background: var(--body-bg);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  font-family: 'Lora', serif;
+  // font-family: 'Lora', serif;
+  font-family: 'Roboto', sans-serif;
+  // font-family: 'Merriweather', serif;
+  // font-family: 'Noto Serif', serif;
 }
 
 /* --- Typography --- */
