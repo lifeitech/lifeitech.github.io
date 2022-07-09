@@ -45,9 +45,8 @@ layout: page
 
 {% for post in posts %}
 
-  <div class="post-preview">
     <div class="post-row">
-    <img class="image-column" src="{{post.image.src}}" alt="Preview Image">
+    <img class="thumbnail-column" src="{{post.image.src}}" alt="Preview Image">
     <div class="text-column">
     <h1>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -93,7 +92,6 @@ layout: page
     </div> <!-- .post-meta -->
 
   </div> </div>  <!-- post-row -->
-  </div> <!-- .post-review -->
 
 {% endfor %}
 

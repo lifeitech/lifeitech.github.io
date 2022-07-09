@@ -172,7 +172,7 @@ function displayPageviews(data) {
   const rows = data.rows; /* could be undefined */
 
   if ($("#post-list").length > 0) { /* the Home page */
-    $(".post-preview").each(function() {
+    $(".post-row").each(function() {
       const path = $(this).find("a").attr("href");
       tacklePV(rows, path, $(this).find(".pageviews"), hasInit);
     });
