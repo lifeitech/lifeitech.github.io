@@ -6,10 +6,6 @@
   type: github
   icon: 'fab fa-github'
 -
-  type: stack-overflow
-  icon: 'fab fa-stack-overflow'
-  url:  'https://math.stackexchange.com/users/324369/fei-li'
--
   type: email
   icon: 'fas fa-envelope'
   noblank: true            # open link in current tab

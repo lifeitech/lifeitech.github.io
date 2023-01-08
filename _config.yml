@@ -47,7 +47,7 @@ google_analytics:
     cache_path: 
 
 
-theme_mode: light # [light|dark]
+theme_mode: # [light|dark]
 
 avatar: '/assets/imgs/avatar.jpg'
 
