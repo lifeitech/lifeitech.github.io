@@ -1704,7 +1704,7 @@ $sidebar-display: "sidebar-display";
       i {
         background-color: var(--sidebar-btn-bg);
         font-size: 1rem;
-        color: black;  // fix large width blank out issue
+        // color: rgba(68, 68, 68, 0.9);  // fix large width blank out issue
         width: $icon-block-size;
         height: $icon-block-size;
         border-radius: 50%;
