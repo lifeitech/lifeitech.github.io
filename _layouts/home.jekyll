@@ -48,6 +48,8 @@ layout: page
     <div class="post-row">
       <img
         class="thumbnail-column"
+        width="200px"
+        height="150px"
         src="{{post.image.src}}"
         alt="Preview Image">
       <div class="text-column">
