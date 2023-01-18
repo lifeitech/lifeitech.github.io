@@ -86,4 +86,9 @@
 
   pre { color: #bfbfbf; } /* override Bootstrap */
   kbd { background-color: black; }
+
+  [class^=prompt-] {
+    --inline-code-bg: #272822;
+    --highlighter-rouge-color: #f8f8f2;  // rgb(82 82 82) text color
+  }
 }

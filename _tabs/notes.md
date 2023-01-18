@@ -5,7 +5,7 @@ icon: 📕
 order: 1
 ---
 
-I'm glad to share some of my course notes. Subjects include machine learning, algorithms, probability, statistics, stochastic process, optimal control, general topology and more.
+Here you can find some of my course notes taken during my past studies. Subjects include machine learning, algorithms, probability, statistics, stochastic process, optimal control, general topology and more.
 
 * TOC
 {:toc}

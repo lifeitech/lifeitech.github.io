@@ -27,6 +27,7 @@ the gradient of the expectation of $f(x)$ under density $p_\alpha$ with respect 
 
 Let's see how we can use some trick to solve this. Using the gradient rule for the log function, we can write
 
+<div style="overflow-x:auto;">
 $$
 \begin{equation}\label{eq:reinforce-intro}
 \begin{split}
@@ -38,8 +39,10 @@ $$
 \end{split}
 \end{equation}
 $$
+</div>
 
 where the integrals are Lebesgue integrals, with respect to the discrete measure on $\mathcal{X}$. The exchange of gradient and integration operation is justified by [Leibniz integral rule](https://en.wikipedia.org/wiki/Leibniz_integral_rule). The last term in \eqref{eq:reinforce-intro} can be approximated by sample mean, which is an unbiased Monte Carlo estimator of the gradient. We see that we are now able to circumvent the need to differentiate discontinuous functions. Thus, given samples $$\{x^{(i)}\}_{i=1}^N$$, computing $$\nabla_\alpha\mathbb{E}_{x\sim p_\alpha}f(x)$$ means computing
+
 
 $$
 \begin{equation}\label{eq:reinforce-intro-samples}
@@ -47,10 +50,12 @@ $$
 \end{equation}
 $$
 
+
 We can now sample from the distribution $p_\alpha$, treat the samples as fixed, and then evaluate \eqref{eq:reinforce-intro-samples} on the samples. 
 
 However, being *unbiased* usually means the new formula \eqref{eq:reinforce-intro-samples} can have high *variances*. To reduce variance, in practice one subtracts a *baseline* function $b(\alpha)$ to $f(x)$ that does not depend on each sample. This does not alter the gradient since
 
+<div style="overflow-x:auto;">
 $$
 \begin{split}
 \mathbb{E}_{x\sim p_\alpha}[(f(x)-b(\alpha))\nabla_\alpha\log p_\alpha(x)] &= \mathbb{E}_{x\sim p_\alpha}[f(x)\nabla_\alpha\log p_\alpha(x)] - \mathbb{E}_{x\sim p_\alpha}[b(\alpha)\nabla_\alpha\log p_\alpha(x)]\\[1em]
@@ -58,15 +63,19 @@ $$
 &= \mathbb{E}_{x\sim p_\alpha}[f(x)\nabla_\alpha\log p_\alpha(x)],
 \end{split}
 $$
+</div>
 
 where we used the fact that 
 
+<div style="overflow-x:auto;">
 $$
 \mathbb{E}_{x\sim p_\alpha}[\nabla_\alpha\log p_\alpha(x)]=0.
 $$
+</div>
 
 To see this,
 
+<div style="overflow-x:auto;">
 $$
 \begin{split}
 \mathbb{E}_{x\sim p_\alpha}[\nabla_\alpha\log p_\alpha(x)] &= \int\nabla_\alpha\log p_\alpha(x)dx\\
@@ -77,6 +86,7 @@ $$
 &= 0.
 \end{split}
 $$
+</div>
 
 <hr>
 Cite as:
