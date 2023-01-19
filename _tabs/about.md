@@ -4,8 +4,6 @@ icon: ⚡
 order: 5
 ---
 
-<img id="about" src="/assets/imgs/about/6.jpg" width="800" height="500" alt="about image">
-
 👋Hi, welcome to my website. My name is Fei Li (李飞). Currently, I work at the headquarter of the Agricultural Bank of China in Beijing. I obtained my Msc. degree in Data Science from Bocconi University in 2020, and my bachelor degree in Economics from Shandong University in 2017. I enjoy travel, hiking, and cooking.
 
 If you find my website useful, you can share it with other people! If you have any comment or suggestion, feel free to contact me via [fei.li.best@outlook.com](mailto:fei.li.best@outlook.com).
@@ -22,9 +20,3 @@ If you find my website useful, you can share it with other people! If you have a
     <img class="sponsor-img" src="/assets/imgs/paypal.png" alt="Sponsor Me with PayPal">
 </a>    
 </div>
-
-
-<script>
-const r = 1 + Math.floor(Math.random() * 12);
-document.getElementById("about").src = `/assets/imgs/about/${r}.jpg`;
-</script>

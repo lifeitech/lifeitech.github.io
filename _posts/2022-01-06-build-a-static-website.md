@@ -4,7 +4,7 @@ date: 2022-01-06 18:00:00 +0800
 categories: [Programming]
 tags: [web-development, html]
 image:
-  src: /assets/imgs/build-a-website.jpg
+  src: /assets/imgs/build-a-website-2.jpg
   width: 800
   height: 500
 ---
