@@ -47,9 +47,11 @@ $$
 
 with
 
+<div style="overflow-x:auto;">
 $$
 V(\alpha, \theta) = \mathbb{E}_{x\sim p_{\text{data}}}\log D_\theta(x) + \mathbb{E}_{z\sim p_Z}\log [1 - D_\theta(g_\alpha(z))].
 $$
+</div>
 
 We see that $$\max_\theta V(\alpha, \theta)$$ means pushing up $$D_\theta$$ on data manifold while pushing down $$D_\theta$$ on generated output from $$g_\alpha$$. On the other hand, $$\min V(\alpha, \theta)$$ means finding $$\alpha$$ so that $$g_\alpha(z)$$ are located at places where $$D_\theta$$ has large values, which should ideally be closer and closer to the true data distribution as training proceeds, from the update of $$D_\theta$$ in $$\max_\theta V(\alpha, \theta)$$ just mentioned. 
 
@@ -63,6 +65,7 @@ $$
 
 One would like to use the above equation to perform maximum likelihood estimation on training data. However, the integral is intractable to compute. Instead, one has to use the encoder to obtain a tractable lower bound on the log density, and maximize the lower bound:
 
+<div style="overflow-x:auto;">
 $$
 \begin{split}
 \log p_\alpha(x) &= \log \int p_\alpha(x\mid z)p_Z(z)dz\\
@@ -72,6 +75,7 @@ $$
 &=: \mathcal{L}_{\alpha,\phi}(x),
 \end{split}
 $$
+</div>
 
 where the inequality is from Jensen's inequality. To compute the lower bound $$\mathcal{L}_{\alpha,\phi}(x)$$ on training data $$x^{(i)}$$, we send the data to the encoder, to obtain a distribution $$q_\phi(z\mid x^{(i)})$$ on $$\mathcal{Z}$$. Then we can sample $$z$$ from this distribution and feed $$z$$ to the decoder network and evaluate the decoder distribution on $$x^{(i)}$$. This is the first term $$\mathbb{E}_{z\sim q_\phi(z\mid x^{(i)})}\log p_\alpha(x^{(i)}\mid z)$$ in $$\mathcal{L}_{\alpha,\phi}(x)$$. We are also able to compute the KL divergence between $$q_\phi(z\mid x^{(i)})$$ and the prior distribution $$p_Z(z)$$ on $$\mathcal{Z}$$, for example a standard Gaussian. Design choices of the decoder $$p_\alpha(x\mid z)$$ depend on the type of data one is modeling. Common choice is to output multivariate Bernoulli for discrete data and multivariate Gaussian for continuous data. The prior distribution $$p_Z$$ as well as the encoder $$q_\phi(z\mid x)$$, however, should be assumed to be continuous. The reason is explained below.
 
@@ -233,9 +237,11 @@ Whereas flow models typically only model continuous data, autoregressive models 
 
 Sampling from an autoregressive model is sequential: to obtain a sample $$(\tilde{x}_1,\ldots,\tilde{x}_d)\in\mathbb{R}^d$$ from the model, one has to first sample $$\tilde{x}_1$$ from $$p(x_1)$$, then sample $$\tilde{x}_2$$ from $$p(x_2\mid \tilde{x}_1)$$, then sample $$\tilde{x}_3$$ from $$p(x_3\mid \tilde{x_1},\tilde{x}_2)$$, and so on. Under some specification, the sample could be a differentiable and invertible transformation of some random noise. For example, if we model each conditional $$p(x_i\mid x_1,\ldots,x_{i-1})$$ as Gaussian with mean $$\mu_i=\mu_i(x_1,\ldots,x_{i-1})$$ and variance $$\sigma_i=\sigma_i(x_1,\ldots,x_{i-1})$$ that are some complex transformations of $$x_1,\ldots,x_{i-1}$$, then to sample $$\tilde{x}_i\sim p(x_i\mid x_1,\ldots,x_{i-1})$$ is the same as to compute 
 
+<div style="overflow-x:auto;">
 $$
 \tilde{x}_i=\mu_i + z_i \cdot \sigma_i \quad\text{with } z_i\sim \mathcal{N}(0,1),\quad \forall~i=1,\ldots,d.
 $$
+</div>
 
 In the other way,
 
