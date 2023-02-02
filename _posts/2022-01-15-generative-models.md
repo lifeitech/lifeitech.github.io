@@ -245,23 +245,29 @@ $$
 
 In the other way,
 
+<div style="overflow-x:auto;">
 $$
 z_i=(x_i - \mu_i) / \sigma_i,\quad \forall~i=1,\ldots,d
 $$
+</div>
 
 and we see that the above two equations have the same structure as for autoregressive flow models. In this case, the autoregressive model is an autoregressive flow. The log absolute determinant of the Jacobian of this transformation is very easy to compute. Incidentally, we also see that the equation
 
+<div style="overflow-x:auto;">
 $$
 \tilde{x}_i=\mu_i + z_i \cdot \sigma_i \quad\text{with } z_i\sim \mathcal{N}(0,1),\quad \forall~i=1,\ldots,d.
 $$
+</div>
 
 is very similar in form to the reparameterization trick in VAE. The idea of both is to express samples as transformation of simple noises, whose derivatives are easy to compute.
 
 Viewing an autoregressive model as a flow model also opens up the possibility of stacking multiple such models together so as to increase the complexity of the model. This is the approach taken in Masked Autoregressive Flow (MAF) [[8]](#8). The drawback of such autoregressive flow models is their lack of flexibility. If it is not the case that
 
+<div style="overflow-x:auto;">
 $$
 p(x_i\mid x_1,\ldots,x_{i-1}) \quad\forall i=1,\ldots,d
 $$
+</div>
 
 are Gaussians, which could be highly likely for real world data, then the model can have poor fit. An autoregressive model, on the other hand, does not make such assumptions, so it could be more flexible.
 
@@ -290,15 +296,19 @@ $$
 
 Taking $\log$ on both sides gives us:
 
+<div style="overflow-x:auto;">
 $$
 \log\left|\frac{\partial}{\partial x}f_\alpha(f_\alpha^{-1}(z))\right| = -\log\left|\frac{\partial}{\partial z}f_\alpha^{-1}(z)\right|.
 $$
+</div>
 
 We thus arrived at the formula:
 
+<div style="overflow-x:auto;">
 $$
 \log p_\alpha(\tilde{x}) = \log p_Z(z) - \log\left|\frac{\partial}{\partial z}f_\alpha^{-1}(z)\right|.
 $$
+</div>
 
 Namely, $\log p_\alpha(\tilde{x})$ can be computed as the log density on noise samples $z$ minus the log-determinant of the Jacobians of the inverse transformation. The later is a standard output in common implementations of flow models.
 
