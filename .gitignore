@@ -16,6 +16,3 @@ Gemfile.lock
 # npm dependencies
 node_modules
 package-lock.json
-
-# Misc
-assets/js/dist

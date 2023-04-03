@@ -57,9 +57,6 @@ disqus:
   comments: true
   shortname: 'www-lifei-tech'
 
-pwa:
-  enabled: true
-
 paginate: 6
 
 plugins:
