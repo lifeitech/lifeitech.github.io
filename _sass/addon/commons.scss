@@ -36,13 +36,15 @@ html[mode=dark] {
 }
 
 :root {
-  font-size: 16px;
+  font-size: 18px;
+  scroll-behavior: auto;
 }
 
 ::selection {
   color: white;
   background: #1A3568;
 }
+
 
 body {
   // line-height: 1.75rem;
@@ -248,7 +250,7 @@ img[data-src] {
   }
 
   .post-content {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
 
 }
@@ -320,13 +322,13 @@ img[data-src] {
     }
 
     // [scroll-focus] added by `smooth-scroll.js`
-    &:target:not([scroll-focus]),
-    &[scroll-focus=true] > p {
-      background-color: var(--footnote-target-bg);
-      width: fit-content;
-      -webkit-transition: background-color 1.5s ease-in-out; // Safari prior 6.1
-      transition: background-color 1.5s ease-in-out;
-    }
+    // &:target:not([scroll-focus]),
+    // &[scroll-focus=true] > p {
+    //   background-color: var(--footnote-target-bg);
+    //   width: fit-content;
+    //   -webkit-transition: background-color 1.5s ease-in-out; // Safari prior 6.1
+    //   transition: background-color 1.5s ease-in-out;
+    // }
   }
 }
 
@@ -341,10 +343,10 @@ img[data-src] {
   }
 
   // [scroll-focus] added by `smooth-scroll.js`
-  @at-root sup:target:not([scroll-focus]),
-  sup[scroll-focus=true] > a#{&} {
-    background-color: var(--footnote-target-bg);
-  }
+  // @at-root sup:target:not([scroll-focus]),
+  // sup[scroll-focus=true] > a#{&} {
+  //   background-color: var(--footnote-target-bg);
+  // }
 }
 
 .reversefootnote {
@@ -451,7 +453,7 @@ img[data-src] {
 }
 
 .post-content {
-  font-size: 1.08rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   margin-top: 2rem;
   overflow-wrap: break-word;
@@ -1535,7 +1537,7 @@ $sidebar-display: "sidebar-display";
   }
 
   .post-content {
-    font-size: 1.03rem;
+    font-size: 1.05rem;
   }
 
   footer > div.d-felx {
