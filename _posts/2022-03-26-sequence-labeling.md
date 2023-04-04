@@ -113,7 +113,7 @@ Cite as:
 @article{lifei2022hmm,
   title   = "{{ page.title }}",
   author  = "Li, Fei",
-  journal = "www.lifei.tech",
+  journal = "{{ site.url }}",
   year    = "2022",
   url     = "{{ page.url | absolute_url }}"
 }

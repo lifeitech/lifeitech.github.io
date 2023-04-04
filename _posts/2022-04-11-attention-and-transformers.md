@@ -14,7 +14,7 @@ math: true
 > In recent years, Transformer-based models are trending and are quickly taking up not only the field of NLP, but also computer vision and many other fields in AI. In this post, we give a tutorial on Transformer, and talk about several state of the arts models based on it, including GPT and BERT. 
 
 ## The Attention Model
-Even with [LSTM](https://lifei.tech/posts/rnn/#long-short-term-memories-lstm) units, problems remain for recurrent neural network models:
+Even with [LSTM](/posts/rnn/#long-short-term-memories-lstm) units, problems remain for recurrent neural network models:
 
 1. Passing data forward through an extended series of recurrent connections leads to loss of information and to difficulties in training. 
 2. Moreover, inherently sequential nature of recurrent networks inhibits the use of parallel computational resources. 
@@ -131,7 +131,7 @@ To get a more detailed sense of the BERT model, you can read the following quote
 
 ## Summary & What's Next
 
-So here we are. We have studied all the common models in NLP up to now, from the simplest [n-gram](https://lifei.tech/posts/nlp-prob-ngram/) model, to [word2vec](https://lifei.tech/posts/embedding-and-word2vec/), [Hidden Markov Model](https://lifei.tech/posts/sequence-labeling/#hidden-markov-model-hmm), [Conditional Random Field](https://lifei.tech/posts/sequence-labeling/#conditional-random-field-crf), [recurrent neural networks](https://lifei.tech/posts/rnn/), to Transformer-based models like GPT and BERT in this post. Transformer models achieve better results because more direct connections between inputs and outputs lead to more efficient learning. Not only are they the state-of-the-art models in NLP, but computer vision, for which convolutional neural networks were once dominant, also sees the trend of transitioning to Transformer-based models. See e.g. ViT [[6]](#6) and MAE [[7]](#7). 
+So here we are. We have studied all the common models in NLP up to now, from the simplest [n-gram](/posts/nlp-prob-ngram/) model, to [word2vec](/posts/embedding-and-word2vec/), [Hidden Markov Model](https://lifei.tech/posts/sequence-labeling/#hidden-markov-model-hmm), [Conditional Random Field](/posts/sequence-labeling/#conditional-random-field-crf), [recurrent neural networks](/posts/rnn/), to Transformer-based models like GPT and BERT in this post. Transformer models achieve better results because more direct connections between inputs and outputs lead to more efficient learning. Not only are they the state-of-the-art models in NLP, but computer vision, for which convolutional neural networks were once dominant, also sees the trend of transitioning to Transformer-based models. See e.g. ViT [[6]](#6) and MAE [[7]](#7). 
 
 Another noticeable trend in AI research is that, big companies are training ever bigger models with billions of parameters. See e.g. Microsoft's Florence [[8]](#8) or Google's Pathways [[9]](#9) model. The cost of training such models is astronomical, which often requires GPU resources that cost hundreds or thousands of millions of dollars. This is simply prohibitive for any individual. Gone are the days when someone can just sit in front of a desk and implement and run a state-of-the-art model on his or her laptop or on a rented machine in the cloud. 
 
@@ -144,7 +144,7 @@ Cite as:
 @article{lifei2022transformers,
   title   = "{{ page.title }}",
   author  = "Li, Fei",
-  journal = "www.lifei.tech",
+  journal = "{{ site.url }}",
   year    = "2022",
   url     = "{{ page.url | absolute_url }}"
 }
