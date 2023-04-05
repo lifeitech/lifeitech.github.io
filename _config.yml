@@ -41,7 +41,7 @@ google_site_verification: google_meta_tag_verification
 
 
 google_analytics:
-  id: 'G-0KC02C9SW0'
+  id:
   pv:
     proxy_endpoint:
     cache_path: 
