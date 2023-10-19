@@ -72,6 +72,13 @@ $$
 \mathbb{P}(+\mid w, c) = \sigma(w\cdot c) = \frac{1}{1+\exp(-w\cdot c)}.
 $$
 
+(The probability of being negative is then
+
+$$
+\mathbb{P}(-\mid w, c) = 1- \sigma(w\cdot c) = \frac{\exp(-w\cdot c)}{1+\exp(-w\cdot c)}.
+$$
+)
+
 For context $c_{1:L}$, the model makes the assumption that all context words are independent, so the probability is
 
 $$
@@ -99,7 +106,7 @@ Then, we can train the logistic regression model to classify positive samples an
 $$
 \begin{split}
 L &= -\log\left[\mathbb{P}(+\mid w,c)\prod_{i=1}^k\mathbb{P}(-\mid w,n_i)\right]\\
-&= -\left[\log\sigma(w\cdot c) + \sum_{i=1}^k\log\sigma(w\cdot n_i)\right].
+&= -\left[\log\sigma(w\cdot c) + \sum_{i=1}^k\log[1-\sigma(w\cdot n_i)]\right].
 \end{split}
 $$
 
