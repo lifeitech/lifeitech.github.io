@@ -271,8 +271,6 @@ $$
 
 are Gaussians, which could be highly likely for real world data, then the model can have poor fit. An autoregressive model, on the other hand, does not make such assumptions, so it could be more flexible.
 
-
-
 ### Evaluate density on generated samples
 
 Finally, for flow models, we derive the formula for $p_\alpha(\tilde{x})$, where $\tilde{x}=f_\alpha^{-1}(z)$ (with $z\sim p_Z$) is a generated sample. To start, plug in the equation for $\tilde{x}$:
@@ -314,6 +312,7 @@ Namely, $\log p_\alpha(\tilde{x})$ can be computed as the log density on noise s
 
 The formula tells us that after we generate samples $\tilde{x}$ from the flow model through the inverse transformation, we can evaluate the density $p_\alpha(\tilde{x})$ for free. There is no need to go through additional calculations.
 
+_(This post is partially based on Fei Li's Master's Thesis)_
 
 <hr>
 Cite as:
