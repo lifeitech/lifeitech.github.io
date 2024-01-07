@@ -312,8 +312,6 @@ Namely, $\log p_\alpha(\tilde{x})$ can be computed as the log density on noise s
 
 The formula tells us that after we generate samples $\tilde{x}$ from the flow model through the inverse transformation, we can evaluate the density $p_\alpha(\tilde{x})$ for free. There is no need to go through additional calculations.
 
-_(This post is partially based on Fei Li's Master's Thesis)_
-
 <hr>
 Cite as:
 
